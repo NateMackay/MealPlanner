@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 tags fluency</title>
+    <link rel="stylesheet" type="text/css" href="fluency.css">   
+  </head>
+
+<body>
+
+  
+  <h3>Video</h3>
+  <video controls>
+    <source src="bike.mp4" type="video/mp4">
+    Your browser does not support this video.
+  </video>
+
+
+  <h3>Audio</h3>
+  <audio controls>
+    <source src="smb_coin.wav" type="audio/wav">
+    Your browser does not support this audio element.
+  </audio>
+
+
+  <h3><input type="button" value="Click here to display another audio clip" onclick="showAudio()"></h3>
+
+  <audio id="hiddenAudio" controls>
+    <source src="smb_powerup.wav" type="audio/wav">
+    Your browser does not support this audio element.
+  </audio>
+
+
+  <h3>Canvas tag</h3>
+  <canvas id="canvasTag">
+    <script>
+      var canvasArea = document.getElementById('canvasTag');
+      
+      canvasArea.style.backgroundColor = "blue";
+    </script>
+    Your browser does not support this canvas tag. </canvas>
+  <h3><input type="button" value="Click here to change the canvas dimensions" onclick="changeWidth()"></h3>
+  
+  <p><strong>Note:</strong> The video, audio, and canvas tags are not supported in Internet Explorer 8 and earlier versions.</p>
+
+  <script src="fluency.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+body { 
+  margin: 3%;
+}
+
+.hideMe { 
+  display: none;
+}
+
+h3 { 
+  user-select: none;
+}
+
+#picture {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+div:hover #picture {
+  opacity: 0.0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+input { 
+  padding: 12px;
+}
+
+canvas { 
+  border: 1px solid darkgray;
+}
+
+#myAnimation { 
+  height: 200px;
+  width:  200px;
+  margin: 20px;
+  position: relative;
+  background: lightblue;
+}
+
+@keyframes down { 
+  from {left: 0px;}
+  to   {left: 300px}
+}
+
+
+
