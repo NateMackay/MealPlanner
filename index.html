@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript fluency</title>
+    <link rel="stylesheet" type="text/css" href="../javaScript.css">
+  </head>
+
+<body>
+  <h1>JavaScript Basics</h1>
+  <h3>For loop</h3>
+  <p onclick="forloop()">
+    First we start with an array three elements: <br>
+    Toyota Prius, Honda Civic, VW Jetta <br>
+    Then we loop through the array and display results. <br>
+    Click here for results.
+    </p>
+    <p id="forloop" class="jsResults"><br><br><br></p>
+
+  <h3>While loop</h3>
+  <p onclick="whileloop()" >
+    A while loop will loop through an array until it reaches the end. <br> 
+    Click here.
+    <p id="whileloop" class="jsResults"><br><br><br><br></p>
+  </p>
+
+  <h3>Conditional Statements</h3>
+    <a href="https://www.w3schools.com/js/js_if_else.asp">www.w3schools.com</a> <br>
+    <p onclick="conditions()">
+      if (condition1) { <br>
+        //  block of code to be executed if condition1 is true <br>
+      } else if (condition2) { <br>
+        //  block of code to be executed if the condition1 is false and condition2    is true<br>
+      } else {<br>
+        //  block of code to be executed if the condition1 is false and condition2   is false<br>
+      }<br>
+      This if statement will display a message based on what time it is. 
+    </p>
+    <p id="condition" class="jsResults"><br></p>
+    <p onclick="switches()">This is a switch statement that will also display a message.</p>
+    <p id="switch" class="jsResults"><br></p>
+
+  <h3>Functions</h3>
+    <a href="https://www.w3schools.com/js/js_if_else.asp">www.w3schools.com</a>
+    <p>
+      To call a function type the function name plus ().<br>
+      calling a function name without () will display the function definition.<br>
+      Function cannot access variable within another function. <br>
+      Rules for function names are the same as variable names. <br>
+      <div onchange="cubed(function1, functions1)">Example using () <br>
+      Enter amount<input id=function1 type="text"> </div>
+    </p>
+    <p id="functions1" class="jsResults"><br></p>
+    <p onchange="cubed2()">Example without () <br>
+      Enter amount<input id=function2 type="text"> </div>
+    </p>
+    <p id="functions2" class="jsResults"><br><br></p>
+
+  <h3>Variables</h3>
+  <a href="https://www.w3schools.com/js/js_variables.asp">www.w3schools.com</a>
+  
+    <p onclick="variables()">
+      Variable names contain letters, digits, underscores, and $ <br>
+      Variable names must begin with a letter, $, or a _ <br>
+      Variable names are case sensitive <br>
+      Reserved words cannot be used <br>
+      Declaring variables example: 
+    </p>
+    <p id="variable" class="jsResults"><br><br><br><br><br></p>
+
+  <h3>Parameters</h3>
+  <a href="https://www.w3schools.com/js/js_function_parameters.asp">www.w3schools.com</a>
+    <p>
+      JavaScript function definitions do not need to specify parameter data types<br>
+      They do not ensure the number of arguments matches the function declaration.<br><br>
+      Enter the candy that you like <br> 
+      <input id="candy1" type="text"><br>
+      <input type="button" onclick="parameters(candy1)" value="Enter"><br>
+      <input id="candy2" type="text"><br>
+      <input id="candy3" type="text"><br>
+      <input id="candy4" type="text"><br>
+      <input id="number" type="button" onclick="parameters(candy1, candy2, candy3, candy4)" value="Enter"><br>
+      
+    </p>
+    <p id="parameter" class="jsResults"><br></p>
+
+  <h3>Arrays</h3>
+  <a href="https://www.w3schools.com/js/js_function_parameters.asp">www.w3schools.com</a>
+    <p onclick="arrays()">
+      declare arrays like this: <br>
+      var array_name = [item1, item2 ...]; <br>
+      Array indexes start with 0 <br>
+      Arrays have many built-in methods including the following: <br>
+      push(), pop(), toString(), shift() unshift(), splice(), sort(), reverse() <br>
+      Arrays can also be combined, and sorted. 
+
+    </p>
+    <p id="array" class="jsResults"><br><br><br><br><br><br><br><br></p>
+
+  <script src="../javaScript.js"> </script>
+</body>
+</html>
