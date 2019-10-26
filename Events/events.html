@@ -40,27 +40,32 @@
   </p>
 
   <p>
-    <h3 onclick="moreRoom('form')" ondblclick="lessRoom('form')">Form Events</h3>
+    <h3 onclick="moreRoom('form'); showMe('formli')" ondblclick="lessRoom('form')">Form Events</h3>
     <ul id="form" class="mobile">
       <li>onblur</li>
       <li>onchange</li>
       <li>oncontextmenu</li>
       <li>onfocus</li>
       <li>oninput</li>
-      <li>oninvalid</li>
+      <li >oninvalid</li>
       <li>onreset</li>
       <li>onsearch</li>
       <li>onselect</li>
       <li>onsubmit</li>
+      <li class="hideMe" id="formli" onclick="addToList(); showMe('formli2')" style="line-height: 15px;">This is not an event, but when clicked it'll add a new item to the list.
+      <span class="hideMe" id="formli2" style="line-height: 15px;"><br>This item was created using<br> createElement, createTextNode, and appendChild.</span></li>
     </ul>
   </p>
 
   <p>
-    <h3 onclick="moreRoom('key')" ondblclick="lessRoom('key')">Keyboard Events</h3>
+    <h3 onclick="moreRoom('key'); showMe('keys')" ondblclick="lessRoom('key')">Keyboard Events</h3>
     <ul id="key">
-      <li>onkeydown</li>
-      <li>onkeypress</li>
-      <li>onkeyup</li>
+      <p class="hideMe" id="keys">
+        <input type="text" onkeydown="key('onkey1')" onkeypress="key('onkey2')" onkeyup="key('onkey3')">
+      </p>
+      <li id="onkey1" onkeydown="key(this)">onkeydown</li>
+      <li id="onkey2" onkeypress="key(this)">onkeypress</li>
+      <li id="onkey3" onkeyup="key(this)">onkeyup</li>
     </ul>
   </p>
 
