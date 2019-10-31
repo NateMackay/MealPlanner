@@ -1,0 +1,111 @@
+
+
+img { 
+  margin: 20px;
+}
+
+/* transition styling */
+#josephTransition { 
+  width: 100px;
+  height: 500px;
+  overflow: hidden;
+  transition: width 1s linear;
+  transition-delay: 2s;
+}
+
+#josephTransition:hover { 
+  width: 440px;
+}
+
+#pedroTransition { 
+  width: 480px;
+  height: 140px;
+  overflow: hidden;
+  transition: height 1s linear;
+  margin: 3px;
+}
+
+#pedroTransition:hover { 
+  height: 480px;
+} 
+
+/* transform styling */
+#brotherBaer1 { 
+  width: 600px;
+  height: 280px;
+  transition: transform 2s linear;
+  visibility: hidden;
+}
+
+#brotherBaer1:hover {
+  transform: translateX(300px);
+  visibility: visible;
+}
+
+#brotherBaer2 { 
+  width: 240px;
+  height: 240px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 4s;
+}
+
+#brotherBaer2:hover{ 
+  transform: rotateZ(360deg);
+}
+
+#front { 
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+#back { 
+  transform: rotateY(180deg);
+}
+
+/* animation styling */
+@keyframes pictures { 
+  0% {background: url("https://avatars3.githubusercontent.com/u/55348714?s=400&v=4");
+       background-size: 200px 200px;}
+  25% {background: url("https://avatars0.githubusercontent.com/u/55464697?s=400&v=4"); background-size: 200px 200px;}
+  50% {background: url("https://media.licdn.com/dms/image/C4E03AQE4B38KxqbUJQ/profile-displayphoto-shrink_200_200/0?e=1577923200&v=beta&t=S3XMRK_ALUVYI-7HGivy6728noh2qILTaSQZ_BfWkbE"); background-size: 200px 200px;}
+  75% {background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtGe-RfiTwAvAiaI5wEHw0dsP8bcmGcuk16cN7CxTkVRHkDpIgEg&s"); background-size: 200px 200px;}
+  100% {background: url("https://avatars3.githubusercontent.com/u/55348714?s=400&v=4"); background-size: 200px 200px;}
+}
+
+#animatePictures { 
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-name: pictures;
+  animation-duration: 8s;
+}
+
+/* transitions and animations setup before javascript triggers*/
+#race { 
+  background-color: aliceblue;
+  padding: 10px;  
+  color: white;
+}
+
+#race div { 
+  width: 150px;
+  height: 50px; 
+  margin: 20px;
+  background-color: blue;
+}
+
+#race:hover #racer1, 
+#race:hover #racer2, 
+#race:hover #racer3, 
+#race:hover #racer4,
+#race:hover #racer5, 
+#race:hover #racer6
+{ 
+  width: 700px;
+}
+
+@keyframes races { 
+  from {width: 150px;}
+  to   {width: 700px;}
+}
