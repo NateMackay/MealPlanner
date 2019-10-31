@@ -11,9 +11,33 @@ h3 {
   user-select: none;
 }
 
-#picture {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+h6 {
+  width: 50px;
+  height: 400px;
+  /* background: "https://avatars3.githubusercontent.com/u/55348714?s=400&v=4"; */
+  background: red;
+  transition: width 3s ease-in-out;
+}
+
+transitions { 
+  width: 50px;
+  height: 400px;
+  overflow: hidden; 
+}
+
+div:hover { 
+  /* background: white; */
+  width: 400px;
+}
+
+#transition2 { 
+  height: 50px;
+  transition: height 2s;
+  overflow: hidden;
+}
+
+#transition2:hover { 
+  height: 400px;
 }
 
 div:hover #picture {

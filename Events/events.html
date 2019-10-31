@@ -127,26 +127,30 @@
     <div class="hideMe" id="animate1">
 
       <input type="button" value="         begin animation events     " onclick="animation1()">
-      <input type="button" value="animation transistions with CSS">
-      <input type="button" value="animation transistions with CSS">
-      <input type="button" value="animation transistions with CSS">
+      <input type="button" value="animation transitions with CSS">
+      <input type="button" value="animation transitions with CSS">
+      <input type="button" value="animation transitions with CSS">
       <div id="myAnimation" animationstart="this.style.background = 'lightgreen'" animationEnd="animationEnd()">
 
       </div>
     </div>
     <div class="hideMe" id="animate2" >
-      <div onmouseover='https://avatars0.githubusercontent.com/u/55464697?s=400&v=4'>
+      <div onmouseover="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4">
       <img id="picture" src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" style="margin: 20px;"></div>
     </div>
   </p>
 
-  <p>
-    <h3 onclick="moreRoom('transition'); showMe('transitions')" ondblclick="lessRoom('transition')">Transition Events</h3>
-    <ul id="transition" class="mobile">
+  <p id="transition">
+    <h3 onclick="moreRoom('transition'); showMe('transition2'); showMe('transitions')" ondblclick="lessRoom('transition')">Transition Events</h3>
+    <ul id="transition3" class="mobile">
       <li>transitionend</li>
     </ul>
-    <div id="transitions" class="hideMe" onmouseover="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4" style="margin: 20px;">
-      <img style="max-width: 200px;" src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" style="margin: 20px;">
+    <div id="transitions" class="hideMe">
+      <img src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" style="margin: 20px;">
+    </div>
+
+    <div id="transition2" class="hideMe">
+      <div src="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4" style="margin: 20px;"></div>
     </div>
   </p>
 
@@ -163,7 +167,7 @@
       ontouchstart="document.getElementById('touch1').style.background = 'red'"; 
       ontouchmove= "document.getElementById('touch1').style.background = 'yellow'";
       ontouchend=  "document.getElementById('touch1').style.background = 'blue'">
-      Touching within the box below will change the color.
+      Touching the screen within the box below will change the color.
       <canvas id="touch1"> 
       This canvas tag is not supported by your browser.
       </canvas>
