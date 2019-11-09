@@ -1,5 +1,4 @@
 
-
 img { 
   margin: 20px;
 }
@@ -34,12 +33,10 @@ img {
   width: 600px;
   height: 280px;
   transition: transform 2s linear;
-  visibility: hidden;
 }
 
 #brotherBaer1:hover {
   transform: translateX(300px);
-  visibility: visible;
 }
 
 #brotherBaer2 { 

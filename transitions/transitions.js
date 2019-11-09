@@ -25,11 +25,6 @@ function infiniteRace() {
 
 };
 
-
-function makeVisible() { 
-  document.getElementById('brotherBaer1').style.visibility = "visible";
-};
-
 function rotatex() { 
   document.getElementById('brotherBaer2').style.transform = 'rotateX(360deg)';
 };

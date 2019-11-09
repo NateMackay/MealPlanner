@@ -9,24 +9,23 @@ function displayData() {
   
     //create a row
     var row = document.createElement("tr");
-      //create a cell item
+      //create a cell item, store the index
       var item = document.createElement("td");
-        //store index value in a cell
         item.innerHTML = (i + 1);
         row.appendChild(item);
-      var cellName = document.createElement("td");
 
-        //store name value in a cell
+      //store name value in a cell
+      var cellName = document.createElement("td");
         cellName.innerHTML = (localStorage.key(i));
         row.appendChild(cellName);
-      var hobby = document.createElement("td");
 
-        //store hobby value in a cell
+      //store hobby value in a cell
+      var hobby = document.createElement("td");
         hobby.innerHTML = (myObj.hobbies);
         row.appendChild(hobby);
+
+      //store siblings value in a cell
       var sibs = document.createElement("td");
-  
-        //store siblings value in a cell
         sibs.innerHTML = (myObj.siblings);
         row.appendChild(sibs); 
     
