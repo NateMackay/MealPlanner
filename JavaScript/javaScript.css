@@ -11,3 +11,7 @@ h3 {
   color: blue;
 }
 
+ul li { 
+  font-size: 130%;
+  padding: 3px;
+}
