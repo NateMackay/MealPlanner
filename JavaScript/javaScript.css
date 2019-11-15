@@ -15,3 +15,7 @@ ul li {
   font-size: 130%;
   padding: 3px;
 }
+
+.submitted { 
+  list-style-type: img src="check.jpg";
+}
