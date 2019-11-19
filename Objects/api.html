@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+    
+    <link rel="stylesheet" type="text/css" href="api.css">   
+  </head>
+
+<body>
+  <header id="header"></header>
+  <h1>Creating JavaScript objects and using localStorage</h1>
+  <div>Button 1 will get data from the Meal DB API, https://www.themealdb.com/api/json/v1/1/random.php<br>
+  Each time the button is pressed, it will create a section and will display the food name, id number, YouTube link, a picture, and the cooking Instructions.</div>
+  <input type="button" onclick="display()" value="Button 1. Display food">
+  <div id="section" style="width: 400px;">
+  </div>
+
+  <form>
+    <div>Button 2 will create a meal object, display the object, and store it in localstorage (Button 2 needs to been pushed after Button 1). </div>
+    <input type="hidden" id="hiddenId" name="hiddenId">
+    <input type="button" onclick="store()" value="Button 2."><br>
+    <div id="objectmessage"></div>
+    <div id="object"></div>
+    <div>Button 3 will create an object from localStorage (from button 2) and display it.</div>
+    <input type="button" onclick="displayObject('one', localObject)" value="Button 3">
+    <div id="localObject"></div>
+    <div id="message"></div>
+  </form>
+  
+  <div id="jsonDiv"></div>
+
+  <script src="api.js"></script>
+  <script src="objects.js"></script>
+</body>
+</html>
