@@ -1,0 +1,59 @@
+
+body { 
+  margin: 4%;
+  background-color: beige;
+  /* overflow-x: hidden; */
+}
+
+.breakfast, .lunch, .dinner {
+  background-color: rgb(11, 130, 235);
+  min-height: 20px;
+  margin: 5px;
+  border-radius: 15px;
+  padding: 1px;
+  font-size: 120%;
+  text-align: center;
+}
+
+h1, h2, h3 { 
+  text-align: center;
+}
+
+/* animated button */
+#populate { 
+  height: 40px;
+  cursor: pointer;
+}
+
+/* button animation */
+@keyframes press { 
+  from {font-size: 100%;}
+  to   {font-size: 170%;}
+}
+
+/* division holding the days of the week. 
+   User can swipe right and left. */
+#swiper { 
+  width: 100%; 
+  /* align-items: center; */
+  align-items: stretch;
+  display: flex;
+  overflow-y: hidden;
+  height: 800px;
+  /* height: 90vw; */
+  /* max-height: 98vh; */
+  --sectionNumber: 1;
+  width: 100%;
+  width: calc(var(--sectionNumber)*100%);
+  transform: translate(calc(var(--index, 0)/var(--sectionNumber)*-100% + var(--xChange, 0px)));
+  transition: transform 1s linear;
+}
+
+/* initial section values */
+section { 
+  min-width: 100%;
+  width: 100%;
+  width: calc(100%/var(--sectionNumber));
+  /* height: 350px; */
+  /* pointer-events: none; */
+}
