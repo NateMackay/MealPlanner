@@ -24,14 +24,14 @@
   <div id="main"> 
     <!-- style="max-height: 10px; max-width: 40px;"> -->
     <span class="navIcon" onclick="switchNav()" style="display: block;">
-      <canvas class="bar1" ></canvas>
-      <canvas class="bar2" ></canvas>
-      <canvas class="bar3" ></canvas>
+      <canvas class="bar1" >Canvas cannot display in this browswer.</canvas>
+      <canvas class="bar2" >Canvas cannot display in this browswer.</canvas>
+      <canvas class="bar3" >Canvas cannot display in this browswer.</canvas>
     </span>
   </div>
 
   <h1>Meals</h1>
-  <button onclick="populate()" id='populate'>Populate meals</button>
+<div id="button"><button onclick="populate()" id='populate'>Populate meals</button></div>
 
   <div id="swiper">
     <!-- Monday -->
@@ -47,7 +47,7 @@
         <p id="lunch"></p>
       </div>
 
-      <div class="dinner">
+      <div class="dinner" id="monDinner">
         <h3>Dinner</h3>
         <p id="dinner"></p>
 
@@ -134,5 +134,6 @@
 
   <script src="menu.js"></script>
   <script src="meals.js"></script>
+  <script src="dinner.js"></script>
 </body>
 </html>

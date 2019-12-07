@@ -19,6 +19,11 @@ h1, h2, h3 {
   text-align: center;
 }
 
+#button { 
+  padding: 70px 60;
+  text-align: center;
+}
+
 /* animated button */
 #populate { 
   height: 40px;
@@ -28,7 +33,7 @@ h1, h2, h3 {
 /* button animation */
 @keyframes press { 
   from {font-size: 100%;}
-  to   {font-size: 170%;}
+  to   {font-size: 200%;}
 }
 
 /* division holding the days of the week. 
@@ -56,4 +61,18 @@ section {
   width: calc(100%/var(--sectionNumber));
   /* height: 350px; */
   /* pointer-events: none; */
+}
+
+
+
+.dinner h2 { 
+  margin: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.dinner p, .dinner a { 
+  color: white;
+  text-shadow: 1px 1px 5px #000000;
+  margin: 5px;
 }
