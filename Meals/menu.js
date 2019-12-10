@@ -30,13 +30,13 @@ function moveIt(item) {
 
 //navigation functions
 function switchNav() { 
+  // open navigation
   if (document.getElementById("mySidenav").style.width != "200px") {
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginLeft = "200px";
     switchIcon();
-
-    //document.getElementById("main").style.transition = "transform 1s";
-  } else {
+  } else { 
+    // close navigation
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     switchIcon();

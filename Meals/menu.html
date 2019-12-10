@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
+    <title>Weekly Meal Plan</title>
     
     <link rel="stylesheet" type="text/css" href="nav.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
@@ -30,7 +30,7 @@
     </span>
   </div>
 
-  <h1>Meals</h1>
+  <h1 id="header">Meals</h1>
 <div id="button"><button onclick="populate()" id='populate'>Populate meals</button></div>
 
   <div id="swiper">
@@ -93,7 +93,7 @@
     </section>
 
     <!-- Thursday -->
-    <section id="thursday">
+    <section id="thursday" onfocus="alert('Thursday')">
       <h2 id="day" onclick="switchNav()">Thursday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
@@ -112,7 +112,7 @@
     </section>
 
     <!-- Friday -->
-    <section id="friday">
+    <section id="friday" onload="scrollTo(0, 0)">
       <h2 id="day" onclick="switchNav()">Friday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>

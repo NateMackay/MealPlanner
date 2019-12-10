@@ -1,12 +1,17 @@
 
 function populate() {
-document.getElementById('breakfast').innerHTML = "oatmeal"
-document.getElementById('lunch').innerHTML = "ramen"
-document.getElementById('populate').style.animation = '';
-document.getElementById('populate').style.display = 'none';
+  document.getElementById('breakfast').innerHTML = "oatmeal"
+  document.getElementById('lunch').innerHTML = "ramen"
+  document.getElementById('populate').style.animation = '';
+  document.getElementById('populate').style.display = 'none';
 
-changeLayout();
-displayDinner();
+  changeLayout();
+
+  // create five dinners
+  for (var i = 0 ; i < 5; i++) { 
+    displayDinner(i);
+  }
+
 }
 
 function addAnimate() { 

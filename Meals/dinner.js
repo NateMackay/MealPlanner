@@ -3,16 +3,16 @@
 
 
 
-function displayDinner() {
+function displayDinner(index) {
   var today = new Date(); 
   var id = today.getMonth() * today.getDate();
   //  + 52700;
   // var din = document.getElementsByClassName('dinner');
   id = 52777;
 
-  for (var index = 0; index < 1; i++) {
     //the api url
-    var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id + index;
+    // var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id + index;
+    var requestURL = 'https://www.themealdb.com/api/json/v1/1/random.php?';
     //create an object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -25,7 +25,7 @@ function displayDinner() {
     xhttp.open('GET', requestURL);
     xhttp.responseType = 'json';
     xhttp.send();
-  }
+  // }
 };
 
 
@@ -110,14 +110,14 @@ function addAMeal(dinner, index) {
   //create an object
   // var dinner = myObj;
   var din = document.getElementsByClassName('dinner');
-  //display a new div for each item in the list
-  // for(i = 0; i < dinner.length; i++) {
+  
     //create a div
     var myDiv = document.createElement('div');
     //create a header, background image, a link, and some text 
     var myH2 = document.createElement('h2');
-    monDinner.style.backgroundImage = "url("+dinner.picture+")";
-    monDinner.style.backgroundSize = "cover";
+    din[index].style.backgroundImage = "url("+dinner.picture+")";
+    din[index].style.backgroundSize = "cover";
+
     myDiv.style.overflowY = "scroll";
     myDiv.style.height = "440px";
 
@@ -138,7 +138,7 @@ function addAMeal(dinner, index) {
     //myDiv.appendChild(myPara1);
     myDiv.appendChild(myPara3);
     myDiv.appendChild(myPara2);
-    monDinner.appendChild(myDiv);
-  // }
+    din[index].appendChild(myDiv);
+
 }
 
