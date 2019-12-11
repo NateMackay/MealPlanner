@@ -16,7 +16,7 @@ function populate() {
   }
   
   // display today's meals
-  // goTo(week[day.getDay()]);
+  goTo(week[day.getDay()]);
 
 }
 
@@ -28,7 +28,7 @@ function addAnimate() {
 function changeLayout() { 
   var din = document.getElementsByClassName('dinner');
   for (var i = 0; i < din.length; i++) { 
-    din[i].style.heightMax = "800px";
+    // din[i].style.heightMax = "800px";
   }
   for (var i = 0; i < document.getElementsByTagName('h1').length; i++) { 
     document.getElementsByTagName('h1')[i].style.marginBottom = "2px";

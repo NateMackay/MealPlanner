@@ -44,7 +44,7 @@ h1, h2, h3 {
   align-items: stretch;
   display: flex;
   overflow-y: hidden;
-  height: 800px;
+  /* height: 800px; */
   /* height: 90vw; */
   /* max-height: 98vh; */
   --sectionNumber: 1;
