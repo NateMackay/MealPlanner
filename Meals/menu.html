@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" id="html">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Meal Plan</title>
     
     <link rel="stylesheet" type="text/css" href="nav.css">
-    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="menu1.css">
   </head>
 
 <body onload="addAnimate()"> 
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
-    <a href="#monday" onclick="switchNav()">Monday</a>
-    <a href="#tuesday" onclick="switchNav()">Tuesday</a>
-    <a href="#wednesday" onclick="switchNav()">Wednesday</a>
-    <a href="#thursday" onclick="switchNav()">Thursday</a>
-    <a href="#friday" onclick="switchNav()">Friday</a>
+    <a onclick="goTo('monday'); switchNav();">Monday</a>
+    <a onclick="goTo('tuesday'); switchNav();">Tuesday</a>
+    <a onclick="goTo('wednesday'); switchNav();">Wednesday</a>
+    <a onclick="goTo('thursday'); switchNav();">Thursday</a>
+    <a onclick="goTo('friday'); switchNav();">Friday</a>
   </div>
 
   <!-- icon to open the sidenav -->
@@ -35,8 +35,8 @@
 
   <div id="swiper">
     <!-- Monday -->
-    <section id="monday">
-      <h2 id="day" onclick="switchNav()">Monday</h2>
+    <section id="monday" class="day">
+      <h2 onclick="switchNav()">Monday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p id="breakfast"></p>
@@ -55,8 +55,8 @@
     </section>
 
     <!-- Tuesday -->
-    <section id="tuesday">
-      <h2 id="day" onclick="switchNav()">Tuesday</h2>
+    <section id="tuesday" class="day">
+      <h2 onclick="switchNav()">Tuesday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p id="breakfast"></p>
@@ -74,8 +74,8 @@
     </section>
   
     <!-- Wednesday -->
-    <section id="wednesday">
-      <h2 id="day" onclick="switchNav()">Wednesday</h2>
+    <section id="wednesday" class="day">
+      <h2 onclick="switchNav()">Wednesday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p id="breakfast"></p>
@@ -93,8 +93,8 @@
     </section>
 
     <!-- Thursday -->
-    <section id="thursday" onfocus="alert('Thursday')">
-      <h2 id="day" onclick="switchNav()">Thursday</h2>
+    <section id="thursday" class="day">
+      <h2 onclick="switchNav()">Thursday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p id="breakfast"></p>
@@ -112,8 +112,8 @@
     </section>
 
     <!-- Friday -->
-    <section id="friday" onload="scrollTo(0, 0)">
-      <h2 id="day" onclick="switchNav()">Friday</h2>
+    <section id="friday" class="day">
+      <h2 onclick="switchNav()">Friday</h2>
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p id="breakfast"></p>
@@ -132,6 +132,7 @@
     
   </div>
 
+  <script src="swipe.js"></script>
   <script src="menu.js"></script>
   <script src="meals.js"></script>
   <script src="dinner.js"></script>

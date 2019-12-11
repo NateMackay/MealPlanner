@@ -118,8 +118,8 @@ function addAMeal(dinner, index) {
     din[index].style.backgroundImage = "url("+dinner.picture+")";
     din[index].style.backgroundSize = "cover";
 
-    myDiv.style.overflowY = "scroll";
-    myDiv.style.height = "440px";
+    // myDiv.style.overflowY = "scroll";
+    // myDiv.style.height = "440px";
 
     var myPara1 = document.createElement('p');
     var myPara2 = document.createElement('a');

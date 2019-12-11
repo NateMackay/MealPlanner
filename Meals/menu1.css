@@ -41,25 +41,30 @@ h1, h2, h3 {
 #swiper { 
   /* width: 100%; 
   /* align-items: center; */
-  /* align-items: stretch;
+  align-items: stretch;
   display: flex;
   overflow-y: hidden;
-  height: 800px; */
+  height: 800px;
   /* height: 90vw; */
   /* max-height: 98vh; */
-  /* --sectionNumber: 1;
+  --sectionNumber: 1;
   width: 100%;
   width: calc(var(--sectionNumber)*100%);
-  transform: translate(calc(var(--index, 0)/var(--sectionNumber)*-100% + var(--xChange, 0px)));
-  transition: transform 1s linear; */
-
-  display: flex;
-  /* align-items: center;    */
-  --sectionNumber: 1;
-  overflow-y: hidden;
-  width: 100%; 
-  width: calc(var(--n)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+  /* transform: translate(calc(var(--index, 0)/var(--sectionNumber)*-100% + var(--xChange, 0px))); */
+  transition: transform 1s linear;
+
+
+
+    /* --n: 1;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    width: 100%; 
+    width: calc(var(--n)*100%);
+    height: 50vw; 
+    max-height: 100vh;
+    transform: translate(calc(var(--i, 0)/var(--n)*-100%)); */
     
 
 
@@ -69,16 +74,18 @@ h1, h2, h3 {
 
 /* initial section values */
 section { 
-  /* min-width: 100%;
+  min-width: 100%;
   width: 100%;
-  width: calc(100%/var(--sectionNumber)); */
+  width: calc(100%/var(--sectionNumber)); 
+  user-select: none;
+  pointer-events: none;
   /* height: 350px; */
   /* pointer-events: none; */
 
-  width: 110%; 
-  width: calc(110%/var(--sectionNumber));
-  user-select: none;
-  pointer-events: none
+    /* width: 100%; 
+    width: calc(100%/var(--n));
+    user-select: none;
+    pointer-events: none */
 
 
 
