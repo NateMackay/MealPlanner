@@ -19,6 +19,10 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.lunchMeal, .breakfastMeal { 
+  display: inline-flex;
+}
+
 #button { 
   padding: 70px 60;
   text-align: center;
