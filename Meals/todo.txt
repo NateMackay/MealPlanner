@@ -1,15 +1,15 @@
 🗸
 
-JavaScript Basics
-JS Objects
-JSON
-AJAX
+🗸JavaScript Basics
+🗸JS Objects
+🗸JSON
+🗸AJAX
 Local storage
-DOM manipulation
-CSS classes with JS
+🗸DOM manipulation
+🗸CSS classes with JS
 🗸Triggering animation with JS
 🗸JS Events
 🗸HTML5 tags
-transitions
-transforms
+🗸transitions
+🗸transforms
 🗸animations

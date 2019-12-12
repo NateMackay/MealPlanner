@@ -8,10 +8,16 @@ var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", 
 var bIcons = ["https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/142/142882.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/352/352702.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/1662/1662345.svg", "https://www.flaticon.com/premium-icon/icons/svg/679/679121.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/1139/1139689.svg" ];
 
 // lunch meals 
-var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "toast & applesauce"];
+var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
 
 // lunch icons 
-var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", "https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/png/512/189/189122.png"];
+var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
+"https://image.flaticon.com/icons/png/512/872/872434.png", 
+"https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/189/189122.png", 
+"https://image.flaticon.com/icons/png/512/1095/1095289.png", 
+"https://image.flaticon.com/icons/png/512/1046/1046748.png", 
+"https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
+"https://image.flaticon.com/icons/png/512/872/872434.png"];
 
 function populate() {
   var day = new Date(); 
@@ -23,7 +29,7 @@ function populate() {
   addLunches();
 
   // create seven dinners
-  for (var i = 0 ; i < 5; i++) { 
+  for (var i = 0 ; i < 7; i++) { 
     displayDinner(i);
   }
 
@@ -41,7 +47,7 @@ function addAnimate() {
 function addBreakfasts() { 
   var breakfast = document.getElementsByClassName('breakfastMeal'); 
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 7; i++) {
     var icon = document.createElement('img');
     icon.setAttribute('src', bIcons[i]);
     breakfast[i].innerHTML = bMeals[i]; 
@@ -55,7 +61,7 @@ function addBreakfasts() {
 function addLunches() { 
   var lunch = document.getElementsByClassName('lunchMeal'); 
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 7; i++) {
     var icon = document.createElement('img');
     icon.setAttribute('src', lIcons[i]);
     icon.setAttribute("height", "30px");

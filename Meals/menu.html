@@ -13,11 +13,16 @@
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
+    <a onclick="goTo('sunday'); switchNav();">Sunday</a>
     <a onclick="goTo('monday'); switchNav();">Monday</a>
     <a onclick="goTo('tuesday'); switchNav();">Tuesday</a>
     <a onclick="goTo('wednesday'); switchNav();">Wednesday</a>
     <a onclick="goTo('thursday'); switchNav();">Thursday</a>
     <a onclick="goTo('friday'); switchNav();">Friday</a>
+    <a onclick="goTo('saturday'); switchNav();">Saturday</a>
+    <a></a>
+    <a onclick="populate()">Refresh meals</a>
+    <a href="grocery">Next week's grocery list</a>
   </div>
 
   <!-- icon to open the sidenav -->
@@ -34,6 +39,25 @@
 <div id="button"><button onclick="populate()" id='populate'>Populate meals</button></div>
 
   <div id="swiper">
+    <!-- Sunday -->
+    <section id="sunday" class="day">
+      <h2 onclick="switchNav()">Sunday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal" id="lunch"></p>
+      </div>
+
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p id="dinner"></p>
+      </div>
+    </section>
+
     <!-- Monday -->
     <section id="monday" class="day">
       <h2 onclick="switchNav()">Monday</h2>
@@ -130,6 +154,25 @@
       </div>
     </section>
     
+    <!-- Saturday -->
+    <section id="saturday" class="day">
+      <h2 onclick="switchNav()">Saturday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+      
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal" id="lunch"></p>
+      </div>
+      
+      <div class="dinner" id="monDinner">
+        <h3>Dinner</h3>
+        <p id="dinner"></p>
+      </div>
+    </section>
+      
   </div>
 
   <script src="swipe.js"></script>
