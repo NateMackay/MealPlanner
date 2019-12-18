@@ -54,6 +54,7 @@ function addBreakfasts() {
     icon.setAttribute("height", "25px");
     icon.setAttribute("style", "margin: 0px 10px");
     breakfast[i].appendChild(icon);
+    breakfast[i].style.display = "inline-flex";
   }
 }
 
@@ -71,15 +72,13 @@ function addLunches() {
     var text = document.createElement('span');
     text.innerHTML = lMeals[i]; 
     lunch[i].appendChild(text);
+    lunch[i].style.display = "inline-flex";
   }
 }
 
 
 function changeLayout() { 
-  var din = document.getElementsByClassName('dinner');
-  for (var i = 0; i < din.length; i++) { 
-    // din[i].style.heightMax = "800px";
-  }
+
   for (var i = 0; i < document.getElementsByTagName('h1').length; i++) { 
     document.getElementsByTagName('h1')[i].style.marginBottom = "2px";
     document.getElementsByTagName('h1')[i].style.marginTop = "30px";
@@ -98,3 +97,5 @@ function changeLayout() {
 
   document.getElementById('populate').style.display = 'none';
 }
+
+

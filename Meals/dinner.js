@@ -1,19 +1,12 @@
 
-
-
+var ids = ["52811", "52869", "52876", "52771", "52765", "52841", "52937", "52773", "52962", "52823", "52945", "52770"];
 
 
 function displayDinner(index) {
-  var today = new Date(); 
-  var id = today.getMonth() * today.getDate();
-  //  + 52700;
-  // var din = document.getElementsByClassName('dinner');
-  id = 52777;
 
-    //the api url
-    // var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id + index;
-    var requestURL = 'https://www.themealdb.com/api/json/v1/1/random.php?';
-    //create an object
+  //the api url
+    var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + ids[index];
+    //create a dinner object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) { 
@@ -25,7 +18,6 @@ function displayDinner(index) {
     xhttp.open('GET', requestURL);
     xhttp.responseType = 'json';
     xhttp.send();
-  // }
 };
 
 
@@ -107,8 +99,7 @@ function storeAMeal(dinner, index) {
 
 //add a meal to the DOM
 function addAMeal(dinner, index) {
-  //create an object
-  // var dinner = myObj;
+  //create object
   var din = document.getElementsByClassName('dinner');
   
     //create a div
@@ -117,9 +108,6 @@ function addAMeal(dinner, index) {
     var myH2 = document.createElement('h2');
     din[index].style.backgroundImage = "url("+dinner.picture+")";
     din[index].style.backgroundSize = "cover";
-
-    // myDiv.style.overflowY = "scroll";
-    // myDiv.style.height = "440px";
 
     var myPara1 = document.createElement('p');
     var myPara2 = document.createElement('a');
@@ -131,7 +119,6 @@ function addAMeal(dinner, index) {
     myPara2.setAttribute('href', dinner.youtubeLink);
     myPara2.setAttribute('target', '_blank');
     myPara3.textContent = 'Directions: ' + dinner.cookDirections;
-    // myPara3.textContent = 'Directions: ' + dinner.strInstructions;
 
     //attach the newly created elements to the parent element
     myDiv.appendChild(myH2);
@@ -139,6 +126,5 @@ function addAMeal(dinner, index) {
     myDiv.appendChild(myPara3);
     myDiv.appendChild(myPara2);
     din[index].appendChild(myDiv);
-
 }
 

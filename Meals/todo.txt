@@ -13,3 +13,16 @@ Local storage
 🗸transitions
 🗸transforms
 🗸animations
+
+
+🗸I still have to add breakfast and lunch meals.
+
+🗸I decided I'm going to add Sunday and Saturday for completeness, even though I don't personally need it.
+
+🗸The dinner meals right now are generated randomly. I'm going to make it so they aren't random.
+
+I'm going to add more information from the API.
+
+I'm working on swiping left and right.
+
+I need to add Local or SessionStorage.

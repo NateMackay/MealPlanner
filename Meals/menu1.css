@@ -1,12 +1,11 @@
 
 body { 
   margin: 4%;
-  background-color: beige;
-  /* overflow-x: hidden; */
+  background-color: rgb(241, 232, 231);
 }
 
 .breakfast, .lunch, .dinner {
-  background-color: rgb(11, 130, 235);
+  background-color: #F41501;
   min-height: 20px;
   margin: 5px;
   border-radius: 15px;
@@ -17,10 +16,6 @@ body {
 
 h1, h2, h3 { 
   text-align: center;
-}
-
-.lunchMeal, .breakfastMeal { 
-  display: inline-flex;
 }
 
 #button { 
@@ -41,38 +36,16 @@ h1, h2, h3 {
 }
 
 /* division holding the days of the week. 
-   User can swipe right and left. */
+   Used for swiping right and left. */
 #swiper { 
-  /* width: 100%; 
-  /* align-items: center; */
   align-items: stretch;
   display: flex;
   overflow-y: hidden;
-  /* height: 800px; */
-  /* height: 90vw; */
-  /* max-height: 98vh; */
   --sectionNumber: 1;
   width: 100%;
   width: calc(var(--sectionNumber)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
-  /* transform: translate(calc(var(--index, 0)/var(--sectionNumber)*-100% + var(--xChange, 0px))); */
   transition: transform 1s linear;
-
-
-
-    /* --n: 1;
-    display: flex;
-    align-items: center;
-    overflow-y: hidden;
-    width: 100%; 
-    width: calc(var(--n)*100%);
-    height: 50vw; 
-    max-height: 100vh;
-    transform: translate(calc(var(--i, 0)/var(--n)*-100%)); */
-    
-
-
-
 
 }
 
@@ -83,23 +56,11 @@ section {
   width: calc(100%/var(--sectionNumber)); 
   user-select: none;
   pointer-events: none;
-  /* height: 350px; */
-  /* pointer-events: none; */
-
-    /* width: 100%; 
-    width: calc(100%/var(--n));
-    user-select: none;
-    pointer-events: none */
-
-
-
 }
-
-
 
 .dinner h2 { 
   margin: 30px;
-  color: white;
+  color: #FFC7C2;
   text-shadow: 2px 2px 5px #000000;
 }
 
@@ -108,3 +69,10 @@ section {
   text-shadow: 1px 1px 5px #000000;
   margin: 5px;
 }
+
+p {
+  color: #FFC7C2;
+}
+
+
+
