@@ -58,7 +58,7 @@ canvas {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-#main {
+#hamburgerIcon {
   transition: margin-left .5s;
   padding: 10px;
   padding-bottom: 20px;

@@ -92,8 +92,8 @@ function changeLayout() {
   for (var i = 0; i < document.getElementsByTagName('p').length; i++) { 
     document.getElementsByTagName('p')[i].style.margin = "5px";
   }
-  document.getElementById('main').style.paddingTop = '0px';
-  document.getElementById('main').style.position = 'absolute'; 
+  document.getElementById('hamburgerIcon').style.paddingTop = '0px';
+  document.getElementById('hamburgerIcon').style.position = 'absolute'; 
 
   document.getElementById('populate').style.display = 'none';
 }

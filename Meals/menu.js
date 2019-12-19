@@ -4,12 +4,12 @@ function switchNav() {
   // open navigation
   if (document.getElementById("mySidenav").style.width != "200px") {
     document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("main").style.marginLeft = "200px";
+    document.getElementById("hamburgerIcon").style.marginLeft = "200px";
     switchIcon();
   } else { 
     // close navigation
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("hamburgerIcon").style.marginLeft = "0";
     switchIcon();
   }
 }
@@ -25,10 +25,3 @@ function goTo(day) {
   document.getElementById(day).scrollIntoView(); 
   document.getElementById('html').scrollIntoView();
 }
-
-// go to the top of the screen
-function goToTop() { 
-  document.getElementById('html').scrollIntoView();
-}
-
-

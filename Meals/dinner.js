@@ -1,5 +1,5 @@
 
-var ids = ["52811", "52869", "52876", "52771", "52765", "52841", "52937", "52773", "52962", "52823", "52945", "52770"];
+var ids = ["52811", "52869", "52876", "52841", "52937", "52962", "52823", "52945", "52770"];
 
 
 function displayDinner(index) {
@@ -80,6 +80,7 @@ function storeAMeal(dinner, index) {
     //object method
     getIngredients: function() { 
       var myDiv = document.createElement('ul');
+      var dayDin = document.getElementsByClassName('dinner');
   
       for (i = 0; i < this.ingredient.length; i++) { 
         if (this.ingredient[i].length > 1) { 
@@ -88,7 +89,7 @@ function storeAMeal(dinner, index) {
           myDiv.appendChild(item);
         }
       }
-      list.appendChild(myDiv);
+      dayDin[index].appendChild(myDiv);
     }
    
   }
@@ -126,5 +127,20 @@ function addAMeal(dinner, index) {
     myDiv.appendChild(myPara3);
     myDiv.appendChild(myPara2);
     din[index].appendChild(myDiv);
+
+    var myPara4 = document.createElement('p');
+    myPara4.textContent = "Ingredients:";
+    myDiv.appendChild(myPara4);
+    // var ingred = document.createElement('ul');
+    // for(var i = 0; dinner.ingredient.length; i++) { 
+    //   if (dinner.ingredient[i]) { 
+    //     var item = document.createElement('li');
+    //     item.textContent = dinner.ingredPortions[i] + " " + dinner.ingredient[i]; 
+    //     ingred.appendChild(item);
+    //   }
+    // }
+    // din[index].appendChild(ingred);
+    dinner.getIngredients();
+
 }
 
