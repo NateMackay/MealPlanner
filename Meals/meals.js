@@ -37,7 +37,6 @@ function populate() {
 
   // display today's meals
   goTo(week[day.getDay()]);
-
 }
 
 function addAnimate() { 

@@ -21,7 +21,7 @@ Local storage
 
 🗸The dinner meals right now are generated randomly. I'm going to make it so they aren't random.
 
-I'm going to add more information from the API.
+🗸I'm going to add more information from the API.
 
 I'm working on swiping left and right.
 

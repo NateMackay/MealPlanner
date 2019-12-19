@@ -1,11 +1,24 @@
 
-var ids = ["52811", "52869", "52876", "52841", "52937", "52962", "52823", "52945", "52770"];
-
+var ids = [ "52823", "52811", "52869", "52876", "52937", "52841", "52962", "52945"];
 
 function displayDinner(index) {
+  var day = new Date(); 
+  //set sunday value
+  if (localStorage.sunday) { 
+  } else { 
+    localStorage.setItem('sunday', day.getDate() - day.getDay())
+  }
+
+  //reset sunday value, if needed
+  if (localStorage.sunday > day.getDate() || localStorage.sunday > day.getDate() + 6) { 
+    localStorage.setItem('sunday', day.getDate() - day.getDay())
+  }
 
   //the api url
-    var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + ids[index];
+    console.log("index " + index)
+    console.log("array value " + (parseInt(index) + parseInt(localStorage.sunday)) % ids.length);
+    console.log("ids[i] " + ids[(parseInt(index) + parseInt(localStorage.sunday)) % ids.length]);
+    var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + ids[(parseInt(index) + parseInt(localStorage.sunday)) % ids.length];
     //create a dinner object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -81,7 +94,7 @@ function storeAMeal(dinner, index) {
     getIngredients: function() { 
       var myDiv = document.createElement('ul');
       var dayDin = document.getElementsByClassName('dinner');
-  
+
       for (i = 0; i < this.ingredient.length; i++) { 
         if (this.ingredient[i].length > 1) { 
           var item = document.createElement('li');
@@ -91,10 +104,10 @@ function storeAMeal(dinner, index) {
       }
       dayDin[index].appendChild(myDiv);
     }
-   
+
   }
   console.log(meal);
-  localStorage.setItem('meal', JSON.stringify(meal));
+  sessionStorage.setItem(dinner.meals[0].strMeal, JSON.stringify(meal));
   addAMeal(meal, index);
 };
 
@@ -128,19 +141,10 @@ function addAMeal(dinner, index) {
     myDiv.appendChild(myPara2);
     din[index].appendChild(myDiv);
 
+    //add ingredients
     var myPara4 = document.createElement('p');
     myPara4.textContent = "Ingredients:";
     myDiv.appendChild(myPara4);
-    // var ingred = document.createElement('ul');
-    // for(var i = 0; dinner.ingredient.length; i++) { 
-    //   if (dinner.ingredient[i]) { 
-    //     var item = document.createElement('li');
-    //     item.textContent = dinner.ingredPortions[i] + " " + dinner.ingredient[i]; 
-    //     ingred.appendChild(item);
-    //   }
-    // }
-    // din[index].appendChild(ingred);
     dinner.getIngredients();
 
 }
-
