@@ -1,6 +1,6 @@
 
 var week = ["sunday" ,"monday" ,"tuesday" ,"wednesday" ,"thursday" ,"friday" ,"saturday"];
-
+var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // breakfast meals
 var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
 
@@ -21,6 +21,8 @@ var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "http
 
 function populate() {
   var day = new Date(); 
+
+  addDates();
 
   // add seven breakfasts 
   addBreakfasts();
@@ -97,4 +99,19 @@ function changeLayout() {
   document.getElementById('populate').style.display = 'none';
 }
 
+//this function adds the date to each day
+function addDates() { 
+  var days = document.getElementsByClassName('date'); 
+  var today  = new Date();
+  var sunday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
 
+  for (var i = 0; i < 7; i++) {
+    days[i].innerHTML = capitalize(week[i]) + ", " 
+    + month[sunday.getMonth()] + " " + (sunday.getDate() + i);
+  }
+}
+
+//this function capitalizes the first letter of a string
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
