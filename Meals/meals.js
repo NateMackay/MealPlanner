@@ -1,6 +1,7 @@
 
 var week = ["sunday" ,"monday" ,"tuesday" ,"wednesday" ,"thursday" ,"friday" ,"saturday"];
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 // breakfast meals
 var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
 
@@ -47,11 +48,12 @@ function addAnimate() {
 
 function addBreakfasts() { 
   var breakfast = document.getElementsByClassName('breakfastMeal'); 
+  var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
     var icon = document.createElement('img');
-    icon.setAttribute('src', bIcons[i]);
-    breakfast[i].innerHTML = bMeals[i]; 
+    icon.setAttribute('src', bIcons[(i + sunday) % bIcons.length]);
+    breakfast[i].innerHTML = bMeals[(i + sunday) % bMeals.length]; 
     icon.setAttribute("height", "25px");
     icon.setAttribute("style", "margin: 0px 10px");
     breakfast[i].appendChild(icon);
@@ -62,16 +64,17 @@ function addBreakfasts() {
 
 function addLunches() { 
   var lunch = document.getElementsByClassName('lunchMeal'); 
+  var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
     var icon = document.createElement('img');
-    icon.setAttribute('src', lIcons[i]);
+    icon.setAttribute('src', lIcons[(i + sunday) % lIcons.length]);
     icon.setAttribute("height", "30px");
     icon.setAttribute("style", "margin: 0px 10px");
     lunch[i].appendChild(icon);
 
     var text = document.createElement('span');
-    text.innerHTML = lMeals[i]; 
+    text.innerHTML = lMeals[(i + sunday) % lMeals.length]; 
     lunch[i].appendChild(text);
     lunch[i].style.display = "inline-flex";
   }
@@ -103,15 +106,26 @@ function changeLayout() {
 function addDates() { 
   var days = document.getElementsByClassName('date'); 
   var today  = new Date();
-  var sunday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
+
+  var sunday = new Date;
+  // sunday.setDate(today.getDate() - today.getDay())
+  //var 
+  sunday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
+
+  //store a local date value for sunday 
+  localStorage.setItem('sunday', sunday.getDate());
+
+  var dayToSet = new Date;
+  dayToSet = sunday;
 
   for (var i = 0; i < 7; i++) {
     days[i].innerHTML = capitalize(week[i]) + ", " 
-    + month[sunday.getMonth()] + " " + (sunday.getDate() + i);
+    + month[dayToSet.getMonth()] + " " + dayToSet.getDate();
+    dayToSet.setDate(dayToSet.getDate() + 1);
   }
 }
 
 //this function capitalizes the first letter of a string
-function capitalize(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }

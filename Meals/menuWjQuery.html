@@ -11,7 +11,7 @@
 
 <body onload="populate()"> 
 
-  <!-- popup menu -->
+  <!-- popup navigation menu -->
   <div id="mySidenav" class="sidenav">
     <a onclick="goTo('sunday'); switchNav();">Sunday</a>
     <a onclick="goTo('monday'); switchNav();">Monday</a>
@@ -21,15 +21,9 @@
     <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="goTo('saturday'); switchNav();">Saturday</a>
     <a></a>
-    <a onclick="goTo('sunday'); switchNav();">Next week</a>
-    <a></a>
-    <a onclick="goTo('sunday'); switchNav();">This week's grocery list</a>
-    <a></a>
-    <a onclick="goTo('sunday'); switchNav();">This week's grocery list</a>
-    <a></a>
   </div>
 
-  <!-- icon to open the sidenav -->
+  <!-- icon to open the mySidenav navigation menu  -->
   <div id="hamburgerIcon"> 
     <span class="navIcon" onclick="switchNav()" style="display: block;">
       <canvas class="bar1" >Canvas cannot display in this browswer.</canvas>
@@ -41,7 +35,8 @@
   <h1 id="header">Meals</h1>
 <div id="button"><button onclick="populate()" id='populate'>Populate meals</button></div>
 
-  <div id="swiper">
+<!-- <div data-role="page" id="pageone"> -->
+  <div data-role="main" class="ui-content" style="display: flex;">
     <!-- Sunday -->
     <section id="sunday" class="day">
       <h2 onclick="switchNav()" class="date">Sunday</h2>
@@ -182,9 +177,13 @@
         <p></p>
       </div>
     </section>
-      
-  </div>
 
+  </div>
+  <!-- </div> -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="swipe.js"></script>
   <script src="menu.js"></script>
   <script src="meals.js"></script>
