@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="menu.css">
   </head>
 
-<body onload="populate()"> 
+<body onload="populate(0)"> 
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
@@ -21,7 +21,8 @@
     <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="goTo('saturday'); switchNav();">Saturday</a>
     <a></a>
-    <a onclick="goTo('sunday'); switchNav();">Next week</a>
+    <a onclick="populate(0); switchNav();">Go back to today</a>
+    <a onclick="populate(7); switchNav();">Next week</a>
     <a></a>
     <a onclick="goTo('sunday'); switchNav();">This week's grocery list</a>
     <a></a>
@@ -52,12 +53,12 @@
 
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p></p>
+        <p></p><div></div><ul></ul>
       </div>
 
     </section>
@@ -72,12 +73,12 @@
 
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
 
       </div>
     </section>
@@ -92,12 +93,12 @@
   
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
   
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
   
@@ -111,12 +112,12 @@
   
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
   
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
 
@@ -130,17 +131,17 @@
 
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
 
       <div class="dinnerAll">
           <div class="dinner front">
             <h3>Dinner</h3>
-            <p ></p>
+            <p ></p><div></div><ul></ul>
           </div>
           <div class="back">
             <h3>Dinner</h3>
-            <p></p>
+            <p></p><div></div><ul></ul>
           </div>
       </div>
     </section>
@@ -155,12 +156,12 @@
 
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
     
@@ -174,12 +175,12 @@
       
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
       
       <div class="dinner">
         <h3>Dinner</h3>
-        <p></p>
+        <p></p><div></div><ul></ul>
       </div>
     </section>
       

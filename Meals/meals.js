@@ -6,7 +6,28 @@ var month = ["January", "February", "March", "April", "May", "June", "July", "Au
 var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
 
 // breakfast icons
-var bIcons = ["https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/142/142882.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/352/352702.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/1662/1662345.svg", "https://www.flaticon.com/premium-icon/icons/svg/679/679121.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", "https://image.flaticon.com/icons/svg/142/142915.svg", "https://image.flaticon.com/icons/svg/1139/1139689.svg" ];
+
+var bIcons = [
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/135/135516.svg", 
+  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
+  //"https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/142/142882.svg", 
+  
+  "https://image.flaticon.com/icons/svg/135/135516.svg", 
+  "https://image.flaticon.com/icons/svg/352/352702.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
+  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+  // "https://www.flaticon.com/premium-icon/icons/svg/679/679121.svg", 
+  
+  "https://image.flaticon.com/icons/svg/135/135516.svg", 
+  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
+  // "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/1139/1139689.svg" 
+  ];
 
 // lunch meals 
 var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
@@ -18,12 +39,13 @@ var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "http
 "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
 "https://image.flaticon.com/icons/png/512/1046/1046748.png", 
 "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
-"https://image.flaticon.com/icons/png/512/872/872434.png"];
+"https://image.flaticon.com/icons/png/512/872/872434.png"
+];
 
-function populate() {
+function populate(days) {
   var day = new Date(); 
 
-  addDates();
+  addDates(days);
 
   // add seven breakfasts 
   addBreakfasts();
@@ -32,14 +54,17 @@ function populate() {
   addLunches();
 
   // create seven dinners
-  for (var i = 0 ; i < 7; i++) { 
+  for (var i = 0; i < 7; i++) { 
     displayDinner(i);
   }
 
-  changeLayout();
-
-  // display today's meals
-  goTo(week[day.getDay()]);
+  if (days < 1) {
+    changeLayout();
+    // display today's meals
+    goTo(week[day.getDay()]);
+  } else {
+    goTo(week[0]);
+  }
 }
 
 function addAnimate() { 
@@ -51,6 +76,7 @@ function addBreakfasts() {
   var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
+    // console.log('breakfast' + i);
     var icon = document.createElement('img');
     icon.setAttribute('src', bIcons[(i + sunday) % bIcons.length]);
     breakfast[i].innerHTML = bMeals[(i + sunday) % bMeals.length]; 
@@ -67,15 +93,16 @@ function addLunches() {
   var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
+    // console.log('lunch' + i);
     var icon = document.createElement('img');
     icon.setAttribute('src', lIcons[(i + sunday) % lIcons.length]);
     icon.setAttribute("height", "30px");
     icon.setAttribute("style", "margin: 0px 10px");
-    lunch[i].appendChild(icon);
+    lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
 
     var text = document.createElement('span');
     text.innerHTML = lMeals[(i + sunday) % lMeals.length]; 
-    lunch[i].appendChild(text);
+    lunch[i].replaceChild(text, lunch[i].childNodes[1]);
     lunch[i].style.display = "inline-flex";
   }
 }
@@ -103,14 +130,12 @@ function changeLayout() {
 }
 
 //this function adds the date to each day
-function addDates() { 
+function addDates(next) { 
   var days = document.getElementsByClassName('date'); 
   var today  = new Date();
 
   var sunday = new Date;
-  // sunday.setDate(today.getDate() - today.getDay())
-  //var 
-  sunday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
+  sunday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + next);
 
   //store a local date value for sunday 
   localStorage.setItem('sunday', sunday.getDate());
@@ -118,9 +143,8 @@ function addDates() {
   var dayToSet = new Date;
   dayToSet = sunday;
 
-  for (var i = 0; i < 7; i++) {
-    days[i].innerHTML = capitalize(week[i]) + ", " 
-    + month[dayToSet.getMonth()] + " " + dayToSet.getDate();
+  for (var i = 0 + next; i < 7 + next; i++) {
+    days[(i + next) % 7].innerHTML = capitalize(week[(i + next) % 7]) + ", " + month[dayToSet.getMonth()] + " " + dayToSet.getDate();
     dayToSet.setDate(dayToSet.getDate() + 1);
   }
 }
@@ -129,3 +153,6 @@ function addDates() {
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+
+

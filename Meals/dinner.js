@@ -127,11 +127,12 @@ function storeAMeal(dinnerMeal, index) {
           myDiv.appendChild(item);
         }
       }
-      dayDin[index].appendChild(myDiv);
+      // dayDin[index].appendChild(myDiv);
+      dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[5]);
     }
 
   }
-  console.log(meal);
+  // console.log(meal);
   sessionStorage.setItem(dinner.meals[0].strMeal, JSON.stringify(meal));
   addAMeal(meal, index);
 };
@@ -164,12 +165,14 @@ function addAMeal(dinner, index) {
     //myDiv.appendChild(myPara1);
     myDiv.appendChild(myPara3);
     myDiv.appendChild(myPara2);
-    din[index].appendChild(myDiv);
+    // din[index].appendChild(myDiv);
+    din[index].replaceChild(myDiv, din[index].childNodes[4]);
 
     //add ingredients
     var myPara4 = document.createElement('p');
     myPara4.textContent = "Ingredients:";
     myDiv.appendChild(myPara4);
+    // myDiv.replaceChild(myPara4, myDiv.childNodes[3]);
     dinner.getIngredients();
 
 }
