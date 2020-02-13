@@ -3,11 +3,23 @@ var week = ["sunday" ,"monday" ,"tuesday" ,"wednesday" ,"thursday" ,"friday" ,"s
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // breakfast meals
-var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
+//var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
+
+var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
+];
 
 // breakfast icons
-
 var bIcons = [
+  "",
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/1543/1543334.svg",
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
+  "https://image.flaticon.com/icons/svg/1182/1182290.svg",
+  "https://image.flaticon.com/icons/svg/142/142882.svg", 
+];
+
+var Icons = [
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
@@ -78,8 +90,8 @@ function addBreakfasts() {
   for (var i = 0; i < 7; i++) {
     // console.log('breakfast' + i);
     var icon = document.createElement('img');
-    icon.setAttribute('src', bIcons[(i + sunday) % bIcons.length]);
-    breakfast[i].innerHTML = bMeals[(i + sunday) % bMeals.length]; 
+    icon.setAttribute('src', bIcons[(i + 0) % bIcons.length]);
+    breakfast[i].innerHTML = bMeals[(i + 0) % bMeals.length]; 
     icon.setAttribute("height", "25px");
     icon.setAttribute("style", "margin: 0px 10px");
     breakfast[i].appendChild(icon);
