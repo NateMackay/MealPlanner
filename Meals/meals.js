@@ -8,6 +8,17 @@ var month = ["January", "February", "March", "April", "May", "June", "July", "Au
 var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
 ];
 
+// breakfast ingredients
+var bIngredients = [
+  [""],
+  ["oats", "peanut butter", "chocolate chips"],
+  ["eggs", "peppers", "cheese"], 
+  ["oats", "peanut butter", "chocolate chips"],
+  ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
+  ["eggs", "flour", "sugar"],
+  ["tortillas", "eggs", "ham", "cheese"]  
+];
+
 // breakfast icons
 var bIcons = [
   "",
@@ -23,7 +34,6 @@ var Icons = [
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  //"https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", 
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/142/142882.svg", 
   
@@ -32,11 +42,9 @@ var Icons = [
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
   "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-  // "https://www.flaticon.com/premium-icon/icons/svg/679/679121.svg", 
   
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  // "https://www.flaticon.com/premium-icon/icons/svg/497/497976.svg", 
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1139/1139689.svg" 
   ];
@@ -96,6 +104,16 @@ function addBreakfasts() {
     icon.setAttribute("style", "margin: 0px 10px");
     breakfast[i].appendChild(icon);
     breakfast[i].style.display = "inline-flex";
+
+    var j = 0;
+    while (bIngredients[i][j]) { 
+     // console.log(sessionStorage.iCounter);
+      sessionStorage.setItem(sessionStorage.iCounter, bIngredients[i][j]);
+    //  console.log(sessionStorage.getItem(sessionStorage.iCounter));
+      sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
+      j++;
+    }
+
   }
 }
 
@@ -121,6 +139,7 @@ function addLunches() {
 
 
 function changeLayout() { 
+  // document.getElementById('swiper').style.display = "inherit";
 
   for (var i = 0; i < document.getElementsByTagName('h1').length; i++) { 
     document.getElementsByTagName('h1')[i].style.marginBottom = "2px";
@@ -151,6 +170,7 @@ function addDates(next) {
 
   //store a local date value for sunday 
   localStorage.setItem('sunday', sunday.getDate());
+  sessionStorage.setItem('iCounter', parseInt(0));
 
   var dayToSet = new Date;
   dayToSet = sunday;
@@ -166,5 +186,40 @@ function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
+//display the list of ingredients
+function toggleIngredients(displayMenu) { 
 
+  if (displayMenu) {
+    document.getElementById('swiper').style.display = "flex";
+    //eraseIngredients();
+  } else {
+    document.getElementById('swiper').style.display = "none";
+    displayIngredients();
+  }
+}
 
+function displayIngredients() { 
+  eraseIngredients();
+  var i = 0;
+  while (sessionStorage.getItem(i)) {
+    var li = document.createElement('li');
+    li.innerHTML = sessionStorage.getItem(i);
+    li.setAttribute('onclick', 'lineThrough(this)');
+    listOfIngredients.appendChild(li);
+    sessionStorage.removeItem(i);
+    i++;
+  }
+
+};
+
+function eraseIngredients() { 
+  while (listOfIngredients.childElementCount > 0) {
+    listOfIngredients.removeChild(listOfIngredients.childNodes[0]);
+  }
+};
+
+function lineThrough(phrase) { 
+  var replace = document.createElement('li');
+  replace.innerHTML = phrase.innerHTML.strike();
+  phrase.parentElement.replaceChild(replace, phrase);
+};

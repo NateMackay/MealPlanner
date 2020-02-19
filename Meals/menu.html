@@ -21,12 +21,13 @@
     <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="goTo('saturday'); switchNav();">Saturday</a>
     <a></a>
-    <a onclick="populate(0); switchNav();">Go back to today</a>
-    <a onclick="populate(7); switchNav();">Next week</a>
+    <a class="menu" onclick="#"><u>Menus</u></a>
+    <a class="menu" onclick="toggleIngredients(true); populate(0); switchNav();">Go back to today</a>
+    <a class="menu" onclick="toggleIngredients(true); populate(7); switchNav();">Next week's</a>
     <a></a>
-    <a onclick="goTo('sunday'); switchNav();">This week's grocery list</a>
-    <a></a>
-    <a onclick="goTo('sunday'); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="#"><u>Grocery Lists</u></a>
+    <a class="menu" onclick="populate(7); toggleIngredients(false); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="populate(0); toggleIngredients(false); switchNav();">This week's grocery list</a>
     <a></a>
   </div>
 
@@ -184,6 +185,10 @@
       </div>
     </section>
       
+  </div> 
+
+  <div>
+    <ul id="listOfIngredients"></ul>
   </div>
 
   <script src="swipe.js"></script>
