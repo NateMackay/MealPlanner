@@ -28,6 +28,15 @@ h1, h2, h3 {
   text-align: center;
 }
 
+h4 { 
+  margin: 5px 10px;
+}
+
+button {
+  margin: 5px;
+  background-color: cornflowerblue;
+}
+
 #button { 
   padding: 70px 60;
   text-align: center;

@@ -22,12 +22,12 @@
     <a onclick="goTo('saturday'); switchNav();">Saturday</a>
     <a></a>
     <a class="menu" onclick="#"><u>Menus</u></a>
-    <a class="menu" onclick="toggleIngredients(true); populate(0); switchNav();">Go back to today</a>
-    <a class="menu" onclick="toggleIngredients(true); populate(7); switchNav();">Next week's</a>
+    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">Go back to today</a>
+    <a class="menu" onclick="toggleIngredients(true. 'Next'); populate(7); switchNav();">Next week's</a>
     <a></a>
     <a class="menu" onclick="#"><u>Grocery Lists</u></a>
-    <a class="menu" onclick="populate(7); toggleIngredients(false); switchNav();">Next week's grocery list</a>
-    <a class="menu" onclick="populate(0); toggleIngredients(false); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
     <a></a>
   </div>
 

@@ -23,8 +23,8 @@ Local storage
 
 🗸I'm going to add more information from the API.
 
-I'm working on swiping left and right.
+🗸I'm working on swiping left and right.
 
-I need to add Local or SessionStorage.
+🗸I need to add Local or SessionStorage.
 
 

@@ -108,12 +108,15 @@ function addBreakfasts() {
     var j = 0;
     while (bIngredients[i][j]) { 
      // console.log(sessionStorage.iCounter);
-      sessionStorage.setItem(sessionStorage.iCounter, bIngredients[i][j]);
-    //  console.log(sessionStorage.getItem(sessionStorage.iCounter));
-      sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
-      j++;
+      if (inList(bIngredients[i][j])) {
+        // don't add it to the list
+        j++;
+      } else {
+        sessionStorage.setItem(sessionStorage.iCounter, bIngredients[i][j]);
+        sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
+        j++;
+      }
     }
-
   }
 }
 
@@ -137,7 +140,19 @@ function addLunches() {
   }
 }
 
+// this function checks the list of ingredients and return true is the ingredient is in the last and false if it is not.
+function inList(item) { 
 
+  for (k = 0; k < parseInt(sessionStorage.getItem('iCounter')); k++) { 
+    if (sessionStorage.getItem(k) == item) { 
+      return true;
+    }
+  }
+  
+  return false;
+};
+
+// this modifies the design of the page
 function changeLayout() { 
   // document.getElementById('swiper').style.display = "inherit";
 
@@ -187,19 +202,28 @@ function capitalize(word) {
 }
 
 //display the list of ingredients
-function toggleIngredients(displayMenu) { 
+function toggleIngredients(displayMenu, week) { 
 
   if (displayMenu) {
     document.getElementById('swiper').style.display = "flex";
     //eraseIngredients();
   } else {
     document.getElementById('swiper').style.display = "none";
-    displayIngredients();
+    displayIngredients(week);
   }
 }
 
-function displayIngredients() { 
+// this function displays the list of ingredients by creating li elements
+function displayIngredients(week) { 
   eraseIngredients();
+  // add a list header
+  var header = document.createElement('li');
+  var bold   = document.createElement('h4');
+  bold.innerHTML = week + " week's grocery list";
+  header.appendChild(bold);
+  listOfIngredients.appendChild(header);
+  
+  // add the list of ingredients
   var i = 0;
   while (sessionStorage.getItem(i)) {
     var li = document.createElement('li');
@@ -210,16 +234,54 @@ function displayIngredients() {
     i++;
   }
 
+  // add a button
+  var li = document.createElement('li');
+  var button = document.createElement('button');
+  button.innerHTML = "Reorder list";
+  button.setAttribute('onclick', 'reorderList()');
+  li.appendChild(button);
+  listOfIngredients.appendChild(li);
 };
 
+// this function erases the list of ingredients
 function eraseIngredients() { 
   while (listOfIngredients.childElementCount > 0) {
     listOfIngredients.removeChild(listOfIngredients.childNodes[0]);
   }
 };
 
+// this function creates and eliminates a strike-through line through a word
 function lineThrough(phrase) { 
-  var replace = document.createElement('li');
-  replace.innerHTML = phrase.innerHTML.strike();
-  phrase.parentElement.replaceChild(replace, phrase);
+  if (phrase.childElementCount > 0) { 
+    var replace = document.createElement('li');
+    replace.setAttribute('onclick', 'lineThrough(this)');
+    replace.innerHTML = phrase.innerText;
+    phrase.parentElement.replaceChild(replace, phrase);
+  } else {
+    var replace = document.createElement('li');
+    replace.setAttribute('onclick', 'lineThrough(this)');
+    replace.innerHTML = phrase.innerHTML.strike();
+    phrase.parentElement.replaceChild(replace, phrase);
+  }
+};
+
+// this function reorders the list of ingredients and places the ingredients with line through it at the bottom of the list
+function reorderList() {
+
+  var length = listOfIngredients.childElementCount - 1;
+  for (var i = 1; i < length; i++) { 
+    if (listOfIngredients.childNodes[i].innerText == "Reorder list") {
+      break;
+    } else if (listOfIngredients.childNodes[i].childElementCount > 0) { 
+      var li = document.createElement('li');
+      var st = document.createElement('strike');
+      st.innerHTML = listOfIngredients.childNodes[i].innerText;
+      st.appendChild(li);
+      listOfIngredients.appendChild(st);
+      listOfIngredients.removeChild(listOfIngredients.childNodes[i]);
+      i--;
+      length--;
+    }
+  }
+
 };
