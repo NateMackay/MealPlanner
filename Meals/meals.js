@@ -3,7 +3,7 @@ var week = ["sunday" ,"monday" ,"tuesday" ,"wednesday" ,"thursday" ,"friday" ,"s
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // breakfast meals
-//var bMeals = ["oatmeal", "cereal", "pancakes", "oatmeal", "breakfast burritos", "cereal", "eggs", "oatmeal", "coffee cake", "waffles",  "cereal","german pancakes", "oatmeal", "french toast"];
+//var bMeals = ["cereal", "eggs", "coffee cake", "waffles" ];
 
 var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
 ];
@@ -31,26 +31,17 @@ var bIcons = [
 ];
 
 var Icons = [
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/135/135516.svg", 
-  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/142/142882.svg", 
-  
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
   "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-  
-  "https://image.flaticon.com/icons/svg/135/135516.svg", 
-  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/1139/1139689.svg" 
   ];
 
 // lunch meals 
 var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
+
+var lunchMWF = ["bagel", "corndog", "ramen"];
+var lunchO   = ["quesildillas", "cold cereal", "peanut butter & jelly sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
 
 // lunch icons 
 var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
@@ -60,6 +51,20 @@ var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "http
 "https://image.flaticon.com/icons/png/512/1046/1046748.png", 
 "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
 "https://image.flaticon.com/icons/png/512/872/872434.png"
+];
+
+var lIconMWF = ["https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/svg/837/837610.svg", "https://image.flaticon.com/icons/png/512/1046/1046748.png"];
+var lIcon     = ["https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/2285/2285997.svg", "https://image.flaticon.com/icons/png/512/189/189122.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png"
+];
+
+var lIngredients = [
+  [""],
+  ["oats", "peanut butter", "chocolate chips"],
+  ["eggs", "peppers", "cheese"], 
+  ["oats", "peanut butter", "chocolate chips"],
+  ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
+  ["eggs", "flour", "sugar"],
+  ["tortillas", "eggs", "ham", "cheese"]  
 ];
 
 function populate(days) {
@@ -109,7 +114,7 @@ function addBreakfasts() {
     while (bIngredients[i][j]) { 
      // console.log(sessionStorage.iCounter);
       if (inList(bIngredients[i][j])) {
-        // don't add it to the list
+        // don't add it to the list if it already exists
         j++;
       } else {
         sessionStorage.setItem(sessionStorage.iCounter, bIngredients[i][j]);
@@ -126,23 +131,34 @@ function addLunches() {
   var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
-    // console.log('lunch' + i);
-    var icon = document.createElement('img');
-    icon.setAttribute('src', lIcons[(i + sunday) % lIcons.length]);
-    icon.setAttribute("height", "30px");
-    icon.setAttribute("style", "margin: 0px 10px");
-    lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
+    if ((i % 2) == 1) {
+      var icon = document.createElement('img');
+      icon.setAttribute('src', lIconMWF[(i + sunday) % lIconMWF.length]);
+      icon.setAttribute("height", "30px");
+      icon.setAttribute("style", "margin: 0px 10px");
+      lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
+  
+      var text = document.createElement('span');
+      text.innerHTML = lunchMWF[(i + sunday) % lunchMWF.length]; 
+      lunch[i].replaceChild(text, lunch[i].childNodes[1]);
+      lunch[i].style.display = "inline-flex";  
+    } else {
+      var icon = document.createElement('img');
+      icon.setAttribute('src', lIcon[(i + sunday) % lIcon.length]);
+      icon.setAttribute("height", "30px");
+      icon.setAttribute("style", "margin: 0px 10px");
+      lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
 
-    var text = document.createElement('span');
-    text.innerHTML = lMeals[(i + sunday) % lMeals.length]; 
-    lunch[i].replaceChild(text, lunch[i].childNodes[1]);
-    lunch[i].style.display = "inline-flex";
+      var text = document.createElement('span');
+      text.innerHTML = lunchO[(i + sunday) % lunchO.length]; 
+      lunch[i].replaceChild(text, lunch[i].childNodes[1]);
+      lunch[i].style.display = "inline-flex";
+    }
   }
 }
 
-// this function checks the list of ingredients and return true is the ingredient is in the last and false if it is not.
+// this function checks the list of ingredients and returns true if the ingredient is in the list and false if it is not.
 function inList(item) { 
-
   for (k = 0; k < parseInt(sessionStorage.getItem('iCounter')); k++) { 
     if (sessionStorage.getItem(k) == item) { 
       return true;
