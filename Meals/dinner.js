@@ -168,7 +168,9 @@ function addAMeal(dinner, index) {
     myDiv.appendChild(myH2);
     //myDiv.appendChild(myPara1);
     myDiv.appendChild(myPara3);
-    myDiv.appendChild(myPara2);
+    if (dinner.youtubeLink != ' ') {
+      myDiv.appendChild(myPara2);
+    }
     // din[index].appendChild(myDiv);
     din[index].replaceChild(myDiv, din[index].childNodes[4]);
 

@@ -57,15 +57,20 @@ var lIconMWF = ["https://image.flaticon.com/icons/png/512/1231/premium/1231662.p
 var lIcon     = ["https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/2285/2285997.svg", "https://image.flaticon.com/icons/png/512/189/189122.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png"
 ];
 
-var lIngredients = [
-  [""],
-  ["oats", "peanut butter", "chocolate chips"],
-  ["eggs", "peppers", "cheese"], 
-  ["oats", "peanut butter", "chocolate chips"],
-  ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
-  ["eggs", "flour", "sugar"],
-  ["tortillas", "eggs", "ham", "cheese"]  
+var lIngredientsMWF = [
+  ["bagel", "cream cheese"],
+  ["corndog"],
+  ["ramen"] 
 ];
+
+var lIngredientsMWF = [
+  ["tortillas", "cheese"],
+  ["cereal"],
+  ["peanut butter", "jam", "bread"], 
+  ["applesauce", "toast"],
+  ["bread", "ham slices", "cheese"]  
+];
+
 
 function populate(days) {
   var day = new Date(); 
