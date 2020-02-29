@@ -16,7 +16,7 @@ var bIngredients = [
   ["oats", "peanut butter", "chocolate chips"],
   ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
   ["eggs", "flour", "sugar"],
-  ["tortillas", "eggs", "ham", "cheese"]  
+  ["tortillas", "eggs", "cubed ham", "cheese"]  
 ];
 
 // breakfast icons
@@ -63,7 +63,7 @@ var lIngredientsMWF = [
   ["ramen"] 
 ];
 
-var lIngredientsMWF = [
+var lIngredients = [
   ["tortillas", "cheese"],
   ["cereal"],
   ["peanut butter", "jam", "bread"], 
@@ -146,7 +146,21 @@ function addLunches() {
       var text = document.createElement('span');
       text.innerHTML = lunchMWF[(i + sunday) % lunchMWF.length]; 
       lunch[i].replaceChild(text, lunch[i].childNodes[1]);
-      lunch[i].style.display = "inline-flex";  
+      lunch[i].style.display = "inline-flex";
+
+      //add the ingredients
+      var j = 0;
+      while (lIngredientsMWF[(i + sunday) % lunchMWF.length][j]) { 
+        if (inList(lIngredientsMWF[(i + sunday) % lunchMWF.length][j])) {
+          // don't add it to the list if it already exists
+          j++;
+        } else {
+          sessionStorage.setItem(sessionStorage.iCounter, lIngredientsMWF[(i + sunday) % lunchMWF.length][j]);
+          sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
+          j++;
+        }
+      }
+      
     } else {
       var icon = document.createElement('img');
       icon.setAttribute('src', lIcon[(i + sunday) % lIcon.length]);
@@ -158,7 +172,24 @@ function addLunches() {
       text.innerHTML = lunchO[(i + sunday) % lunchO.length]; 
       lunch[i].replaceChild(text, lunch[i].childNodes[1]);
       lunch[i].style.display = "inline-flex";
+
+      //add the ingredients
+      var j = 0;
+      while (lIngredients[(i + sunday) % lIcon.length][j]) { 
+       // console.log(sessionStorage.iCounter);
+        if (inList(lIngredients[(i + sunday) % lIcon.length][j])) {
+          // don't add it to the list if it already exists
+          j++;
+        } else {
+          sessionStorage.setItem(sessionStorage.iCounter, lIngredients[(i + sunday) % lIcon.length][j]);
+          sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
+          j++;
+        }
+      }
+  
+
     }
+
   }
 }
 
