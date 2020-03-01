@@ -1,4 +1,15 @@
 
+// $(document).ready(function(){
+//   $(".flip").click(function(){
+//     $("p").flip();
+//   });
+// });
+
+
+// $(".flip").flip({   
+// });
+
+
   // $("#tuesday").on("swiperight", function(){ 
   //   alert("Your swiped right");
   // });
