@@ -10,7 +10,7 @@ var dinnerMeals = ['{"meals":[{  "idMeal":"0",  "strMeal":"Salad bar",  "strInst
 
 '{"meals":[{  "idMeal":"4",  "strMeal":"Tuna Roll",  "strInstructions":"Mix together crust (flour, salt, butter) until it forms a sticky dough. Roll out into a flat rectangle. In a saucepan add onions and butter. Cook until the onions are brown. Then mix in flour until it is consistent. Then add milk, salt, marjoram, and thyme. Let it thicken. Stir in tuna, parsley, and a beaten egg minus 1 Tbsp. After the mixture is cooked, spoon it into the crust. Roll the crust, seal the seam. Place the roll onto a greased cookie sheet with the seam down. Brush 1 Tbsp egg. Bake @ 400ᵒ for 30-35 minutes.",  "strMealThumb":"https://thumbs.dreamstime.com/b/chicken-parmigiana-roll-traditional-italian-sauce-59492367.jpg",  "strYoutube":" ",   "strIngredient1":"Flour","strIngredient2":"Salt","strIngredient3":"Butter","strIngredient4":"Onion","strIngredient5":"Butter","strIngredient6":"Flour","strIngredient7":"Evaporated Milk","strIngredient8":"Salt","strIngredient9":"Marjoram","strIngredient10":"Thyme","strIngredient11":"Tuna","strIngredient12":"Parsley","strIngredient13":"Egg","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"",  "strMeasure1":"1 cup","strMeasure2":"½ tsp","strMeasure3":"⅓ cup","strMeasure4":"2 Tbsp","strMeasure5":"2 Tbsp","strMeasure6":"1 Tbsp","strMeasure7":"¼ cup","strMeasure8":"¼ tsp","strMeasure9":"⅛ tsp","strMeasure10":"⅛ tsp","strMeasure11":"1 can, drained","strMeasure12":"a dash","strMeasure13":"1","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ",  "strSource":" ",  "dateModified":null}]}',
 
-'{"meals":[{  "idMeal":"5",  "strMeal":"Fettuccine Alfredo",  "strInstructions":"1. Chop the cauliflower. Bring the vegetable broth to a boil over medium high heat and add cauliflower. Cook until cauliflower is soft, about 15 minutes. In my experience, the longer you cook it, the smoother the sauce will be. Meanwhile, melt the butter in a large skillet over medium heat. Add the minced garlic and saute for 4-5 minutes or until soft and fragrant. 2. As the garlic and cauliflower are cooking, bring a large pot of water to boil and cook the fettuccine according to directions on package, reserving some of the starchy water to add to the sauce later. 3. Transfer cauliflower to a blender with about 2 cups of the broth. You may need to do this in batches depending on the size of your blender. Add the sauteed garlic, salt, nutmeg, and black pepper and puree until very smooth, about 5 minutes. Once the mixture is moving, stream the olive oil into the blender. Add more broth or water if the mixture is too thick to move through the blender. You want it to turn through the blender easily. When puree is very smooth, transfer back to the butter/garlic skillet. 4. Add the cream and cook over low heat. Add the starchy pasta water (or regular water if you’re not making pasta) and keep warm until ready to serve. Combine noodles and sauce in a large pot or skillet and serve immediately.",  "strMealThumb":"https://thumbs.dreamstime.com/b/fettuccine-alfredo-thyme-rustic-table-30981504.jpg",  "strYoutube":" ",   "strIngredient1":"Fettuccine","strIngredient2":"Cauliflower","strIngredient3":"Vegetable broth","strIngredient4":"Garlic","strIngredient5":"Butter","strIngredient6":"Salt","strIngredient7":"Nutmeg","strIngredient8":"Black pepper","strIngredient9":"Olive oil","strIngredient10":"Heavy cream","strIngredient11":"water","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"",  "strMeasure1":"1 lb","strMeasure2":"3 heads","strMeasure3":"6 cups","strMeasure4":"6 cloves","strMeasure5":"1 Tbsp","strMeasure6":"1 tsp","strMeasure7":"1 pinch","strMeasure8":"1 pinch","strMeasure9":"1 Tbsp","strMeasure10":"¼ cup","strMeasure11":"1 cup","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ",  "strSource":"https://pinchofyum.com/healthy-fettucine-alfredo",  "dateModified":null}]}',
+'{"meals":[{  "idMeal":"5",  "strMeal":"Fettuccine Alfredo",  "strInstructions":"1. Chop the cauliflower. Bring the vegetable broth to a boil over medium high heat and add cauliflower. Cook until cauliflower is soft, about 15 minutes. In my experience, the longer you cook it, the smoother the sauce will be. Meanwhile, melt the butter in a large skillet over medium heat. Add the minced garlic and saute for 4-5 minutes or until soft and fragrant. 2. As the garlic and cauliflower are cooking, bring a large pot of water to boil and cook the fettuccine according to directions on package, reserving some of the starchy water to add to the sauce later. 3. Transfer cauliflower to a blender with about 2 cups of the broth. You may need to do this in batches depending on the size of your blender. Add the sauteed garlic, salt, nutmeg, and black pepper and puree until very smooth, about 5 minutes. Once the mixture is moving, stream the olive oil into the blender. Add more broth or water if the mixture is too thick to move through the blender. You want it to turn through the blender easily. When puree is very smooth, transfer back to the butter/garlic skillet. 4. Add the cream and cook over low heat. Add the starchy pasta water (or regular water if you’re not making pasta) and keep warm until ready to serve. Combine noodles and sauce in a large pot or skillet and serve immediately.",  "strMealThumb":"https://thumbs.dreamstime.com/b/fettuccine-alfredo-thyme-rustic-table-30981504.jpg",  "strYoutube":"https://pinchofyum.com/healthy-fettucine-alfredo",   "strIngredient1":"Fettuccine","strIngredient2":"Cauliflower","strIngredient3":"Vegetable broth","strIngredient4":"Garlic","strIngredient5":"Butter","strIngredient6":"Salt","strIngredient7":"Nutmeg","strIngredient8":"Black pepper","strIngredient9":"Olive oil","strIngredient10":"Heavy cream","strIngredient11":"water","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"",  "strMeasure1":"1 lb","strMeasure2":"3 heads","strMeasure3":"6 cups","strMeasure4":"6 cloves","strMeasure5":"1 Tbsp","strMeasure6":"1 tsp","strMeasure7":"1 pinch","strMeasure8":"1 pinch","strMeasure9":"1 Tbsp","strMeasure10":"¼ cup","strMeasure11":"1 cup","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ",  "strSource":"https://pinchofyum.com/healthy-fettucine-alfredo",  "dateModified":null}]}',
 
 '{"meals":[{  "idMeal":"6",  "strMeal":"Sweet Chili",  "strInstructions":"In a large stock pot cook 4-6 slices of cut up bacon over medium high heat until it looks about half way done – just about 2-3 minutes. Add a chopped pepper (any color) to the bacon and continue to cook another 3-4 minutes, stirring occasionally. Add 1 lb ground beef and continue to cook until book is thoroughly cooked. Now add the remaining ingredients and continue cooking until heated thoroughly, about 7-8 more minutes. Serve with cornbread or chips. ",  "strMealThumb":"https://thumbs.dreamstime.com/b/chili-homemade-beans-homemade-chili-kidney-beans-fire-roasted-tomatoes-onions-hot-peppers-ground-beef-ground-turkey-106480462.jpg",  "strYoutube":" ",   "strIngredient1":"Bacon","strIngredient2":"Ground beef","strIngredient3":"Sweet pepper","strIngredient4":"Tomato sauce","strIngredient5":"Brown sugar","strIngredient6":"Dry mustard","strIngredient7":"Baked beans","strIngredient8":"Salt","strIngredient9":"Ground pepper","strIngredient10":"corn","strIngredient11":"scoop chips","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"",  "strMeasure1":"6-8 strips","strMeasure2":"1 lb","strMeasure3":"1 large chopped","strMeasure4":"33 oz","strMeasure5":"¼ cup","strMeasure6":"1 tsp","strMeasure7":"2 cans","strMeasure8":"1 tsp","strMeasure9":"½ tsp","strMeasure10":"1-2 cans","strMeasure11":"1 bag","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ",  "strSource":" ",  "dateModified":null}]}', 
 
@@ -41,42 +41,13 @@ function displayDinner(index) {
   var day = new Date(); 
   var sunday = parseInt(localStorage.sunday);
 
-  // //set sunday value
-  // if (localStorage.sunday) { 
-  // } else { 
-  //   localStorage.setItem('sunday', day.getDate() - day.getDay())
-  // }
-
-  // //reset sunday value, if needed
-  // if (localStorage.sunday > day.getDate() || localStorage.sunday > day.getDate() + 6) { 
-  //   localStorage.setItem('sunday', day.getDate() - day.getDay())
-  // }
- 
-
-  //get the dinner meal 
+  //store the dinner meal 
   storeAMeal((dinnerMeals[(parseInt(sunday) + parseInt(index)) % dinnerMeals.length]), index);
 
-  //the api url
-    // console.log("index " + index);
-    // console.log("array value " + (parseInt(index) + parseInt(sunday)) % ids.length);
-    // console.log("ids[i] " + ids[(parseInt(index) + parseInt(sunday)) % ids.length]);
-    // var requestURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + ids[(parseInt(index) + parseInt(sunday)) % ids.length];
-    // //create a dinner object
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function() {
-    //   if (this.readyState == 4 && this.status == 200) { 
-    //     var dinner = xhttp.response;
-    //     storeAMeal(dinner, index);
-    //   }
-    // }
-    
-    // xhttp.open('GET', requestURL);
-    // xhttp.responseType = 'json';
-    // xhttp.send();
 };
 
 
-//stores the API information into a javaScript object, displays the object, and stores it in localStorage 
+//stores the json information into a javaScript object, displays the object, and stores it in localStorage 
 function storeAMeal(dinnerMeal, index) { 
   var dinner = JSON.parse(dinnerMeal);
 
@@ -173,7 +144,7 @@ function addAMeal(dinner, index) {
 
     myH2.textContent = dinner.name;
     myPara1.textContent = 'id: ' + dinner.id;
-    myPara2.textContent = 'Youtube';
+    myPara2.textContent = 'Link';
     myPara2.setAttribute('href', dinner.youtubeLink);
     myPara2.setAttribute('target', '_blank');
     myPara3.textContent = 'Directions: ' + dinner.cookDirections;
