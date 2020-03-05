@@ -1,7 +1,7 @@
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  width: 0px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -73,8 +73,12 @@ canvas {
 
 /* for screens smaller than 330 */
 @media screen and (max-width: 330px) { 
-  .sidenav a {font-size: 21px;}
-  .sidenav .menu {font-size: 21px;}
+  .sidenav a 
+  {
+    font-size: 20px;
+    padding: 4px 4px 4px 32px;
+  }
+  .sidenav .menu {font-size: 20px;}
 }
 
 /* for screens smaller than 450 */

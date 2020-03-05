@@ -75,6 +75,10 @@ var lIngredients = [
 function populate(days) {
   var day = new Date(); 
 
+  if (sessionStorage.length < 1) {
+    changeLayout();
+  }
+  
   addDates(days);
 
   // add seven breakfasts 
@@ -89,7 +93,6 @@ function populate(days) {
   }
 
   if (days < 1) {
-    changeLayout();
     // display today's meals
     goTo(week[day.getDay()]);
   } else {
@@ -225,7 +228,10 @@ function changeLayout() {
   document.getElementById('hamburgerIcon').style.position = 'absolute'; 
 
   document.getElementById('populate').style.display = 'none';
-  document.getElementById('mySidenav').style.width = '0px';
+  
+  //if (document.getElementById('mySidenav').style.width == "") {
+    document.getElementById('mySidenav').style.width = '0px';
+  //}
 }
 
 //this function adds the date to each day
