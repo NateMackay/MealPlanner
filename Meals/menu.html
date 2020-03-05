@@ -13,6 +13,7 @@
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
+    <a id="demo"></a>
     <a onclick="goTo('sunday'); switchNav();">Sunday</a>
     <a onclick="goTo('monday'); switchNav();">Monday</a>
     <a onclick="goTo('tuesday'); switchNav();">Tuesday</a>
@@ -195,5 +196,11 @@
   <script src="menu.js"></script>
   <script src="meals.js"></script>
   <script src="dinner.js"></script>
+
+  <script>
+    document.getElementById("demo").innerHTML = 
+    "Screen width is " + screen.width;
+  </script>
+    
 </body>
 </html>
