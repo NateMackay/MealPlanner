@@ -54,8 +54,7 @@ button {
   to   {font-size: 200%;}
 }
 
-/* division holding the days of the week. 
-   Used for swiping right and left. */
+/* division holding the days of the week.For swiping right and left. */
 #swiper { 
   align-items: stretch;
   display: flex;
@@ -65,7 +64,6 @@ button {
   width: calc(var(--sectionNumber)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
   transition: transform 1s linear;
-
 }
 
 /* initial section values */
@@ -75,6 +73,22 @@ section {
   width: calc(100%/var(--sectionNumber)); 
   user-select: none;
   pointer-events: none;
+}
+
+  /* for screens largeer than 1500 */
+@media screen and (min-width: 1500px) {
+  section { 
+    min-width: initial;
+  }
+
+  h2, h3 { 
+    font-size: 110%;
+  }
+
+  p { 
+    font-size: 80%;
+  }
+
 }
 
 .dinner h2 { 

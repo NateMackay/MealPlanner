@@ -225,6 +225,7 @@ function changeLayout() {
   document.getElementById('hamburgerIcon').style.position = 'absolute'; 
 
   document.getElementById('populate').style.display = 'none';
+  document.getElementById('mySidenav').style.width = '0px';
 }
 
 //this function adds the date to each day

@@ -14,21 +14,22 @@
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
     <a id="demo"></a>
-    <a onclick="goTo('sunday'); switchNav();">Sunday</a>
-    <a onclick="goTo('monday'); switchNav();">Monday</a>
-    <a onclick="goTo('tuesday'); switchNav();">Tuesday</a>
-    <a onclick="goTo('wednesday'); switchNav();">Wednesday</a>
-    <a onclick="goTo('thursday'); switchNav();">Thursday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('sunday'); switchNav();">Sunday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('monday'); switchNav();">Monday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('tuesday'); switchNav();">Tuesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('wednesday'); switchNav();">Wednesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
     <a onclick="goTo('friday'); switchNav();">Friday</a>
-    <a onclick="goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); addSnacks();">Add snacks</a>
     <a></a>
-    <a class="menu" onclick=""><u>Menus</u></a>
-    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">Go back to today</a>
-    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's</a>
-    <a></a>
-    <a class="menu" onclick=""><u>Grocery Lists</u></a>
+    <!-- <a class="menu" onclick=""><u>Menus</u></a> -->
     <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's Menu</a>
+    <a></a>
+    <!-- <a class="menu" onclick=""><u>Grocery Lists</u></a> -->
     <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
     <a></a>
   </div>
 

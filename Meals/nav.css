@@ -16,7 +16,7 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -66,14 +66,27 @@ canvas {
   cursor: pointer;
 }
 
-.sidenav .menu { 
+/* .sidenav .menu { 
   font-size: 20px;
+} */
+
+
+/* for screens smaller than 330 */
+@media screen and (max-width: 330px) { 
+  .sidenav a {font-size: 21px;}
+  .sidenav .menu {font-size: 21px;}
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 15px;}
-  
-}
+/* for screens smaller than 450 */
+/* @media screen and (max-width: 450px) {
+  .sidenav {padding-top: 22px;}
+  .sidenav a {font-size: 22px;}  
+} */
+
+/* for screens smaller than 610 */
+/* @media screen and (max-width: 610px) {
+  .sidenav {padding-top: 32px;}
+  .sidenav a {font-size: 32px;}  
+} */
+
 

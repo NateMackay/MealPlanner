@@ -2,14 +2,15 @@
 //navigation functions
 function switchNav() { 
   // open navigation
-  if (document.getElementById("mySidenav").style.width != "200px") {
-    document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("hamburgerIcon").style.marginLeft = "200px";
+  var width = screen.width * 0.8;
+  if (document.getElementById("mySidenav").style.width == "0px") {
+    document.getElementById("mySidenav").style.width = width + "px";
+    document.getElementById("hamburgerIcon").style.marginLeft = width + "px";
     switchIcon();
   } else { 
     // close navigation
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("hamburgerIcon").style.marginLeft = "0";
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("hamburgerIcon").style.marginLeft = "0px";
     switchIcon();
   }
 }
@@ -25,3 +26,4 @@ function goTo(day) {
   document.getElementById(day).scrollIntoView(); 
   document.getElementById('html').scrollIntoView();
 }
+ 
