@@ -21,7 +21,7 @@
     <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
     <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
-    <a onclick="toggleIngredients(true, 'This'); addSnacks();">Add snacks</a>
+    <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
     <a></a>
     <!-- <a class="menu" onclick=""><u>Menus</u></a> -->
     <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
@@ -54,10 +54,12 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
@@ -74,10 +76,12 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
@@ -94,10 +98,12 @@
         <p class="breakfastMeal"></p>
       </div>
   
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
   
       <div class="dinner">
         <h3>Dinner</h3>
@@ -113,10 +119,12 @@
         <p class="breakfastMeal"></p>
       </div>
   
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
   
       <div class="dinner">
         <h3>Dinner</h3>
@@ -132,10 +140,12 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinnerAll">
           <div class="dinner front">
@@ -157,10 +167,12 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
@@ -176,10 +188,12 @@
         <p class="breakfastMeal"></p>
       </div>
       
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
       
       <div class="dinner">
         <h3>Dinner</h3>
@@ -197,6 +211,7 @@
   <script src="menu.js"></script>
   <script src="meals.js"></script>
   <script src="dinner.js"></script>
+  <script src="snack.js"></script>
 
   <script>
     document.getElementById("demo").innerHTML = 
