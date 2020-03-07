@@ -1,5 +1,5 @@
 
-var sn1 = [ "peanut butter sandwich", "graham crackers & milk", "protein bar & almonds", "hard boiled egg", "fruit", "applesauce & cottage cheese", "nuts & string cheese", "toast & yogurt"];
+var sn1 = [ "peanut butter", "graham crackers & milk", "protein bar & almonds", "hard boiled egg", "fruit", "applesauce & cottage cheese", "nuts & string cheese", "toast & yogurt"];
 var sn2 = ["orange & cheese", "veggies & dip", "protein bar", "yogurt", "hard boiled egg", "peanut butter toast"];
 
 function addSnacks() {

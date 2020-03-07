@@ -75,9 +75,9 @@ var lIngredients = [
 function populate(days) {
   var day = new Date(); 
 
-  if (sessionStorage.length < 1) {
-    changeLayout();
-  }
+  // if (sessionStorage.length < 1) {
+  //  changeLayout();
+  // }
   
   addDates(days);
 
@@ -98,6 +98,8 @@ function populate(days) {
   } else {
     goTo(week[0]);
   }
+
+  document.getElementById('mySidenav').style.width = '0px';
 }
 
 function addAnimate() { 

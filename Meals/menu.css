@@ -40,6 +40,18 @@ body {
   text-align: center;
 }
 
+h1 { 
+  margin-bottom: 2px;
+  margin-top: 30px;
+}
+
+h2 { 
+  margin: 6px;
+}
+
+h3 { 
+  margin: 2px;
+}
 h1, h2, h3 { 
   text-align: center;
 }
@@ -101,10 +113,9 @@ section {
     font-size: 110%;
   }
 
-  p { 
+  p, ul { 
     font-size: 80%;
   }
-
 }
 
 .dinner h2 { 
@@ -121,6 +132,7 @@ section {
 
 p {
   color: #FFC7C2;
+  margin: 5px;
 }
 
 ul { 
