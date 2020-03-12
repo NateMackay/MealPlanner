@@ -7,23 +7,34 @@
     
     <link rel="stylesheet" type="text/css" href="nav.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="swipe/jquery.touchSwipe.min.js"></script>
   </head>
 
-<body onload="populate()"> 
+<body onload="populate(0)"> 
 
-  <!-- popup navigation menu -->
+  <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
-    <a onclick="goTo('sunday'); switchNav();">Sunday</a>
-    <a onclick="goTo('monday'); switchNav();">Monday</a>
-    <a onclick="goTo('tuesday'); switchNav();">Tuesday</a>
-    <a onclick="goTo('wednesday'); switchNav();">Wednesday</a>
-    <a onclick="goTo('thursday'); switchNav();">Thursday</a>
+    <a id="demo"></a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('sunday'); switchNav();">Sunday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('monday'); switchNav();">Monday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('tuesday'); switchNav();">Tuesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('wednesday'); switchNav();">Wednesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
     <a onclick="goTo('friday'); switchNav();">Friday</a>
-    <a onclick="goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
+    <a></a>
+    <!-- <a class="menu" onclick=""><u>Menus</u></a> -->
+    <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's Menu</a>
+    <a></a>
+    <!-- <a class="menu" onclick=""><u>Grocery Lists</u></a> -->
+    <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
     <a></a>
   </div>
 
-  <!-- icon to open the mySidenav navigation menu  -->
+  <!-- icon to open the sidenav -->
   <div id="hamburgerIcon"> 
     <span class="navIcon" onclick="switchNav()" style="display: block;">
       <canvas class="bar1" >Canvas cannot display in this browswer.</canvas>
@@ -33,10 +44,8 @@
   </div>
 
   <h1 id="header">Meals</h1>
-<div id="button"><button onclick="populate()" id='populate'>Populate meals</button></div>
 
-<!-- <div data-role="page" id="pageone"> -->
-  <div data-role="main" class="ui-content" style="display: flex;">
+  <div id="swiper">
     <!-- Sunday -->
     <section id="sunday" class="day">
       <h2 onclick="switchNav()" class="date">Sunday</h2>
@@ -45,14 +54,16 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p></p>
+        <p></p><div></div><ul></ul>
       </div>
 
     </section>
@@ -65,14 +76,16 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
 
       </div>
     </section>
@@ -85,14 +98,16 @@
         <p class="breakfastMeal"></p>
       </div>
   
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
   
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
   
@@ -104,14 +119,16 @@
         <p class="breakfastMeal"></p>
       </div>
   
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
   
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
 
@@ -123,19 +140,21 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinnerAll">
           <div class="dinner front">
             <h3>Dinner</h3>
-            <p ></p>
+            <p ></p><div></div><ul></ul>
           </div>
           <div class="back">
             <h3>Dinner</h3>
-            <p></p>
+            <p></p><div></div><ul></ul>
           </div>
       </div>
     </section>
@@ -148,14 +167,16 @@
         <p class="breakfastMeal"></p>
       </div>
 
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
 
       <div class="dinner">
         <h3>Dinner</h3>
-        <p ></p>
+        <p ></p><div></div><ul></ul>
       </div>
     </section>
     
@@ -167,26 +188,35 @@
         <p class="breakfastMeal"></p>
       </div>
       
+      <div class="snack1"></div>
       <div class="lunch">
         <h3>Lunch</h3>
-        <p class="lunchMeal"></p>
+        <p class="lunchMeal"><img><span></span></p>
       </div>
+      <div class="snack2"></div>
       
       <div class="dinner">
         <h3>Dinner</h3>
-        <p></p>
+        <p></p><div></div><ul></ul>
       </div>
     </section>
+      
+  </div> 
 
+  <div>
+    <ul id="listOfIngredients"></ul>
   </div>
-  <!-- </div> -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <script src="swipe.js"></script>
+
+  
   <script src="menu.js"></script>
   <script src="meals.js"></script>
   <script src="dinner.js"></script>
+  <script src="snack.js"></script>
+
+  <script>
+    document.getElementById("demo").innerHTML = 
+    "Screen width is " + screen.width;
+  </script>
+    
 </body>
 </html>
