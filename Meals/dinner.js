@@ -115,6 +115,15 @@ function storeAMeal(dinnerMeal, index) {
           item.textContent = this.ingredPortions[i] + " " + this.ingredient[i];
           myDiv.appendChild(item);
         }
+
+        // add the ingredient to the grocery list
+        if (inList(this.ingredient[i]) || this.ingredient[i] == "") {
+          // don't add it to the list if it already exists
+        } else {
+          sessionStorage.setItem(sessionStorage.iCounter, this.ingredient[i]);
+          sessionStorage.setItem("iCounter", parseInt(sessionStorage.getItem("iCounter")) + 1);
+        }
+        console.log(sessionStorage.iCounter);
       }
       // dayDin[index].appendChild(myDiv);
       dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[5]);

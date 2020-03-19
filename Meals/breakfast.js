@@ -1,12 +1,9 @@
 
-var week = ["sunday" ,"monday" ,"tuesday" ,"wednesday" ,"thursday" ,"friday" ,"saturday"];
-var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
+];
 
 // breakfast meals not used 
 //var bMeals = ["cereal", "eggs", "coffee cake", "waffles" ];
-
-var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
-];
 
 // breakfast ingredients
 var bIngredients = [
