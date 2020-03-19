@@ -1,9 +1,11 @@
 
 //navigation functions
+// This will display/hide the navigation menu
 function switchNav() { 
-  // open navigation
   var width = screen.width * 0.8;
-  if (document.getElementById("mySidenav").style.width == "0px") {
+  if (document.getElementById("mySidenav").style.width == "" || 
+      document.getElementById("mySidenav").style.width == "0px") {
+    // open navigation
     document.getElementById("mySidenav").style.width = width + "px";
     document.getElementById("hamburgerIcon").style.marginLeft = width + "px";
     switchIcon();
@@ -21,7 +23,7 @@ function switchIcon() {
   nav[0].classList.toggle("change");
 }
 
-// this takes the focus to the day selected from the menu
+// this takes the web page focus to the day selected from the menu
 function goTo(day) { 
   document.getElementById(day).scrollIntoView(); 
   document.getElementById('html').scrollIntoView();

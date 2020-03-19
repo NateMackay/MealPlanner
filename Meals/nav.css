@@ -68,26 +68,21 @@ canvas {
   position: absolute;
 }
 
-/* .sidenav .menu { 
-  font-size: 20px;
-} */
-
-
 /* for screens smaller than 330 */
 @media screen and (max-width: 330px) { 
   .sidenav a 
   {
-    font-size: 20px;
+    font-size: 18px;
     padding: 4px 4px 4px 32px;
   }
-  .sidenav .menu {font-size: 20px;}
+  .sidenav .menu {font-size: 18px;}
 }
 
 /* for screens smaller than 450 */
-/* @media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
   .sidenav {padding-top: 22px;}
-  .sidenav a {font-size: 22px;}  
-} */
+  .sidenav a {font-size: 20px;}  
+}
 
 /* for screens smaller than 610 */
 /* @media screen and (max-width: 610px) {
