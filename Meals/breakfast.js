@@ -1,5 +1,5 @@
 
-var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
+var bMeals = ["fun", "oatmeal", "omlets & toast", "oatmeal", "pancakes", "german pancakes", "breakfast burritos"
 ];
 
 // breakfast meals not used 

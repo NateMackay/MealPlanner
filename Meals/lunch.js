@@ -1,6 +1,6 @@
 
-// lunch meals 
-var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
+// unused lunch meals 
+//var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
 
 var lunchMWF = ["bagel", "corndog", "ramen"];
 var lunchO   = ["quesadillas", "cold cereal", "peanut butter & jelly sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
@@ -20,8 +20,8 @@ var lIcon     = ["https://image.flaticon.com/icons/png/512/872/872434.png", "htt
 ];
 
 var lIngredientsMWF = [
-  ["bagel", "cream cheese"],
-  ["corndog"],
+  ["bagels", "cream cheese"],
+  ["corndogs"],
   ["ramen"] 
 ];
 
@@ -29,7 +29,7 @@ var lIngredients = [
   ["tortillas", "cheese"],
   ["cereal"],
   ["peanut butter", "jam", "bread"], 
-  ["applesauce", "toast"],
+  ["applesauce", "bread"],
   ["bread", "ham slices", "cheese"]  
 ];
 

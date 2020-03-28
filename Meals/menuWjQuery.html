@@ -3,16 +3,101 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
     <title>Weekly Meal Plan</title>
     
     <link rel="stylesheet" type="text/css" href="nav.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
-    <script type="text/javascript" src="swipe/jquery.touchSwipe.min.js"></script>
+
+    <!-- add the jQWidgets base styles and one of the theme stylesheets -->
+    <link rel="stylesheet" href="swipe/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="swipe/jqwidgets/styles/jqx.material.css" type="text/css" /> -->
+
+    <!-- for a navigation bar -->
+    <link rel="stylesheet" href="swipe/jqwidgets/styles/jqx.light.css" type="text/css" />
+    <script type="text/javascript" src="swipe/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="swipe/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="swipe/jqwidgets/jqxnavbar.js"></script>
+    <!-- <script type="text/javascript" src="swipe/jqwidgets/jqxlistbox.js"></script> -->
+    <!-- <script type="text/javascript" src="swipe/jqwidgets/jqxscrollbar.js"></script> -->
+    <!-- <script type="text/javascript" src="swipe/scripts/demos.js"></script> -->
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#layoutBar').jqxNavBar({height:'auto', selection: false });
+            $("#navBar").jqxNavBar({minimizedTitle: "Meals", minimized: true, minimizedHeight: 40, height: 120, orientation: 'vertical', selectedItem: 0 });
+            // $("#navBar2").jqxNavBar({ minimizedTitle: "NavBar 2", minimized: true, minimizedHeight: 40, height: 120, selectedItem: 0 });
+        });
+    </script>
+        
+    <!-- add the jQWidgets framework -->
+    <script type="text/javascript" src="swipe/jqwidgets/jqxcore.js"></script>
+    <!-- add widgets, for buttons -->
+    <!-- <script type="text/javascript" src="swipe/jqwidgets/jqxbuttons.js"></script> -->
+    <script type="text/javascript">
+      window.onload = function() {
+        const button = new jqxButton("button", { width: '120px', height: '35px', theme: 'material'});
+      };
+    </script>
+
+    <!-- for swiping -->
+    <script type="text/javascript" src="swipe/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="swipe/demos/Javascript & JQuery/mobiledemos/simulator.js"></script>
+    <script type="text/javascript" src="swipe/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="swipe/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="swipe/jqwidgets/jqxscrollview.js"></script>
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+            var theme = prepareSimulator("photoGallery");
+            $('#photoGallery').jqxScrollView({ theme: theme, width: '100%', height: '100%', buttonsOffset: [0, 0] });
+            initSimulator("photoGallery");
+        });
+    </script> -->
+    <script type="text/javascript" src="swipe/swipe.js"></script>
+    <style type="text/css">
+        .photo {
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="swipe.css">
+
   </head>
 
-<body onload="populate(0)"> 
+<!-- <body onload="populate(0)">  -->
+<body class='default' onload="populate(0)"> 
+  
+	<!-- <button id="button" onclick="populate(0)">Button</button> -->
 
-  <!-- popup menu -->
+  <!-- popup navigation menu -->
+  <div id="layoutBar">
+    <ul>
+      <li>Minimized NavBar with Vertical Layout
+        <div id="navBar">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        </li>
+        <li>Minimized NavBar with not Vertical Layout
+          <div id="navBar2">
+              <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+              </ul>
+          </div>
+          </li>
+        </ul>
+  
+    </div>
+
   <div id="mySidenav" class="sidenav">
     <a id="demo"></a>
     <a onclick="toggleIngredients(true, 'This'); goTo('sunday'); switchNav();">Sunday</a>
@@ -45,171 +130,214 @@
 
   <h1 id="header">Meals</h1>
 
-  <div id="swiper">
-    <!-- Sunday -->
-    <section id="sunday" class="day">
-      <h2 onclick="switchNav()" class="date">Sunday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
+  <div id="demoContainer" class="device-mobile-tablet">
+    <div id="container" class="device-mobile-tablet-container">
+        <div id="scrollview" style="overflow: hidden; width: 100%; height: 100%; background: #222;">
+            <div id="photoGallery">
+                <div>
+                    <div id="swiper" class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature3.jpg)"> -->
+                      <!-- Sunday -->
+                      <section id="sunday" class="day">
+                        <h2 onclick="switchNav()" class="date">Sunday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
+                  
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
+                  
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p></p><div></div><ul></ul>
+                        </div>
+                  
+                      </section>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo" >
+                      <!-- style="background-image: url(swipe/images/imageNature2.jpg)"> -->
+                      <!-- Monday -->
+                      <section id="monday" class="day">
+                        <h2 onclick="switchNav()" class="date">Monday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
 
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
-      </div>
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p ></p><div></div><ul></ul>
 
-    </section>
+                        </div>
+                      </section>
 
-    <!-- Monday -->
-    <section id="monday" class="day">
-      <h2 onclick="switchNav()" class="date">Monday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature1.jpg)"> -->
+                      <!-- Tuesday -->
+                      <section id="tuesday" class="day">
+                        <h2 onclick="switchNav()" class="date">Tuesday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
+                    
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
+                    
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p ></p><div></div><ul></ul>
+                        </div>
+                      </section>
 
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature4.jpg)">                      -->
+                      <!-- Wednesday -->
+                      <section id="wednesday" class="day">
+                        <h2 onclick="switchNav()" class="date">Wednesday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
+                    
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
+                    
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p ></p><div></div><ul></ul>
+                        </div>
+                      </section>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature5.jpg)"> -->
+                      <!-- Thursday -->
+                      <section id="thursday" class="day">
+                        <h2 onclick="switchNav()" class="date">Thursday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
 
-      </div>
-    </section>
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
 
-    <!-- Tuesday -->
-    <section id="tuesday" class="day">
-      <h2 onclick="switchNav()" class="date">Tuesday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
-  
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
-  
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
-      </div>
-    </section>
-  
-    <!-- Wednesday -->
-    <section id="wednesday" class="day">
-      <h2 onclick="switchNav()" class="date">Wednesday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
-  
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
-  
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
-      </div>
-    </section>
+                        <div class="dinnerAll">
+                            <div class="dinner front">
+                              <h3>Dinner</h3>
+                              <p ></p><div></div><ul></ul>
+                            </div>
+                            <div class="back">
+                              <h3>Dinner</h3>
+                              <p></p><div></div><ul></ul>
+                            </div>
+                        </div>
+                      </section>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature5.jpg)"> -->
+                      <!-- Friday -->
+                      <section id="friday" class="day">
+                        <h2 onclick="switchNav()" class="date">Friday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
 
-    <!-- Thursday -->
-    <section id="thursday" class="day">
-      <h2 onclick="switchNav()" class="date">Thursday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
 
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p ></p><div></div><ul></ul>
+                        </div>
+                      </section>
+                    </div>
+                </div>
+                <div>
+                    <div class="photo">
+                       <!-- style="background-image: url(swipe/images/imageNature5.jpg)"> -->
+                      <!-- Saturday -->
+                      <section id="saturday" class="day">
+                        <h2 onclick="switchNav()" class="date">Saturday</h2>
+                        <div class="breakfast">
+                          <h3>Breakfast</h3>
+                          <p class="breakfastMeal"></p>
+                        </div>
+                        
+                        <div class="snack1"></div>
+                        <div class="lunch">
+                          <h3>Lunch</h3>
+                          <p class="lunchMeal"><img><span></span></p>
+                        </div>
+                        <div class="snack2"></div>
+                        
+                        <div class="dinner">
+                          <h3>Dinner</h3>
+                          <p></p><div></div><ul></ul>
+                        </div>
+                      </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-      <div class="dinnerAll">
-          <div class="dinner front">
-            <h3>Dinner</h3>
-            <p ></p><div></div><ul></ul>
-          </div>
-          <div class="back">
-            <h3>Dinner</h3>
-            <p></p><div></div><ul></ul>
-          </div>
-      </div>
-    </section>
 
-    <!-- Friday -->
-    <section id="friday" class="day">
-      <h2 onclick="switchNav()" class="date">Friday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
-
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
-
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
-      </div>
-    </section>
-    
-    <!-- Saturday -->
-    <section id="saturday" class="day">
-      <h2 onclick="switchNav()" class="date">Saturday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
-      </div>
-      
-      <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
-      </div>
-      <div class="snack2"></div>
-      
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
-      </div>
-    </section>
-      
-  </div> 
+  <!-- <div id="swiper">
+  </div>  -->
 
   <div>
     <ul id="listOfIngredients"></ul>
   </div>
 
   
-  <script src="menu.js"></script>
+  <script src="nav.js"></script>
   <script src="meals.js"></script>
+  <script src="breakfast.js"></script>
+  <script src="lunch.js"></script>
   <script src="dinner.js"></script>
   <script src="snack.js"></script>
 
@@ -217,6 +345,7 @@
     document.getElementById("demo").innerHTML = 
     "Screen width is " + screen.width;
   </script>
+  
     
 </body>
 </html>

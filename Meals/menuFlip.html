@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-us" id="html">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Plan</title>
+    
+    <!-- <link href="touch-3d-flip-box/dist/flip-box.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+
+    <!-- <script src="/touch-3d-flip-box//cdn/jquery.min.js"></script> -->
+    <script src="jquery-3.4.1.js"></script>
+    
+    <script src="./touch-3d-flip-box/dist/flip-box.js"></script>
+    
+
+
+    <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="jquery.flip.min.js"></script> -->
+  </head>
+
+<body onload="populate(0)"> 
+
+  <!-- popup menu -->
+  <div id="mySidenav" class="sidenav">
+    <a id="demo"></a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('sunday'); switchNav();">Sunday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('monday'); switchNav();">Monday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('tuesday'); switchNav();">Tuesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('wednesday'); switchNav();">Wednesday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
+    <a onclick="goTo('friday'); switchNav();">Friday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
+    <a></a>
+    <!-- <a class="menu" onclick=""><u>Menus</u></a> -->
+    <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's Menu</a>
+    <a></a>
+    <!-- <a class="menu" onclick=""><u>Grocery Lists</u></a> -->
+    <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
+    <a></a>
+  </div>
+
+  <!-- icon to open the sidenav -->
+  <div id="hamburgerIcon"> 
+    <span class="navIcon" onclick="switchNav()" style="display: block;">
+      <canvas class="bar1" >Canvas cannot display in this browswer.</canvas>
+      <canvas class="bar2" >Canvas cannot display in this browswer.</canvas>
+      <canvas class="bar3" >Canvas cannot display in this browswer.</canvas>
+    </span>
+  </div>
+
+  <h1 id="header">Meals</h1>
+
+  <div id="swiper">
+    <!-- Sunday -->
+    <section id="sunday" class="day">
+      <h2 onclick="switchNav()" class="date">Sunday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p></p><div></div><ul></ul>
+      </div>
+
+    </section>
+
+    <!-- Monday -->
+    <section id="monday" class="day">
+      <h2 onclick="switchNav()" class="date">Monday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p ></p><div></div><ul></ul>
+
+      </div>
+    </section>
+
+    <!-- Tuesday -->
+    <section id="tuesday" class="day">
+      <h2 onclick="switchNav()" class="date">Tuesday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+  
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+  
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p ></p><div></div><ul></ul>
+      </div>
+    </section>
+  
+    <!-- Wednesday -->
+    <section id="wednesday" class="day">
+      <h2 onclick="switchNav()" class="date">Wednesday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+  
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+  
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p ></p><div></div><ul></ul>
+      </div>
+    </section>
+
+    <!-- Thursday -->
+    <section id="thursday" class="day">
+      <h2 onclick="switchNav()" class="date">Thursday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+
+      <div class="dinnerAll box" onclick="rotate()" id="box">
+          <div class="dinner front">
+            <h3>Dinner</h3>
+            <p ></p><ul></ul>
+          </div>
+          <div class="back">
+            <h3>Dinner</h3>
+            <p></p><div></div><ul></ul>
+          </div>
+      </div>
+    </section>
+
+    <!-- Friday -->
+    <section id="friday" class="day">
+      <h2 onclick="switchNav()" class="date">Friday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p ></p><div></div><ul></ul>
+      </div>
+    </section>
+    
+    <!-- Saturday -->
+    <section id="saturday" class="day">
+      <h2 onclick="switchNav()" class="date">Saturday</h2>
+      <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="lunch">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div>
+      <div class="snack2"></div>
+      
+      <div class="dinner">
+        <h3>Dinner</h3>
+        <p></p><div></div><ul></ul>
+      </div>
+    </section>
+      
+  </div> 
+
+  <div>
+    <ul id="listOfIngredients"></ul>
+  </div>
+
+
+  <script src="menu.js"></script>
+  <script src="meals.js"></script>
+  <script src="dinner.js"></script>
+  <script src="snack.js"></script>
+
+  <script>
+    document.getElementById("demo").innerHTML = 
+    "Screen width is " + screen.width;
+  </script>
+
+  <script>
+    function rotate() { 
+      document.getElementById('box').style.transform = 'rotateX(360deg)';
+
+    }
+  </script>
+    
+</body>
+</html>

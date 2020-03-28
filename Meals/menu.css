@@ -38,6 +38,7 @@ body {
   padding: 1px;
   font-size: 120%;
   text-align: center;
+  visibility: hidden;
 }
 
 h1 { 
@@ -146,3 +147,35 @@ ul {
     font-size: 125%;
   }
 }
+
+/* 
+
+.flip { 
+  margin: 0 auto;
+}
+
+
+
+
+.box { 
+  /* width: 240px;
+  height: 240px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 4s;
+}
+
+.box:hover{ 
+  transform: rotateZ(360deg);
+}
+
+.front { 
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.back { 
+  transform: rotateY(180deg);
+  background-image: url('https://thumbs.dreamstime.com/b/easy-pleasant-smile-colored-emoji-sticker-icon-element-mobile-concept-web-apps-illustration-white-background-137182140.jpg');
+}
+ */

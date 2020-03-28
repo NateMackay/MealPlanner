@@ -5,40 +5,44 @@ var month = ["January", "February", "March", "April", "May", "June", "July", "Au
 // breakfast meals not used 
 //var bMeals = ["cereal", "eggs", "coffee cake", "waffles" ];
 
-var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
+// var bMeals = ["Fun", "Oatmeal", "Omlets & toast", "Oatmeal", "Pancakes", "German pancakes", "breakfast burritos"
+// ];
+
+// // breakfast ingredients
+// var bIngredients = [
+//   [""],
+//   ["oats", "peanut butter", "chocolate chips"],
+//   ["eggs", "peppers", "cheese"], 
+//   ["oats", "peanut butter", "chocolate chips"],
+//   ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
+//   ["eggs", "flour", "sugar"],
+//   ["tortillas", "eggs", "cubed ham", "cheese"]  
+// ];
+
+// // breakfast icons
+// var bIcons = [
+//   "",
+//   "https://image.flaticon.com/icons/svg/142/142915.svg", 
+//   "https://image.flaticon.com/icons/svg/1543/1543334.svg",
+//   "https://image.flaticon.com/icons/svg/142/142915.svg", 
+//   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
+//   "https://image.flaticon.com/icons/svg/1182/1182290.svg",
+//   "https://image.flaticon.com/icons/svg/142/142882.svg", 
+// ];
+
+// var Icons = [
+//   "https://image.flaticon.com/icons/svg/135/135516.svg", 
+//   "https://image.flaticon.com/icons/svg/352/352702.svg", 
+//   "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
+//   "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+//   ];
+
+
+var commonIngredients = [
+  "flour", "sugar", "baking powder", "salt", "oil", "ramen", "black pepper", "beef broth", "worcestershire sauce", "parsley", "oregano", "water", "chicken broth", "thyme", "baking soda", "tomato sauce", "garlic powder", "basil", "Italian seasoning", "chili powder", "olive oil", "brown sugar", "dry mustard", "baked beans", "milk", "salad dressing", "black beans", "curry", "mayonnaise", "lemon juice", "evaporated milk", "marjoram", "vegetable broth", "nutmeg", "italian seasoning", "tomato paste", "salsa"
 ];
 
-// breakfast ingredients
-var bIngredients = [
-  [""],
-  ["oats", "peanut butter", "chocolate chips"],
-  ["eggs", "peppers", "cheese"], 
-  ["oats", "peanut butter", "chocolate chips"],
-  ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
-  ["eggs", "flour", "sugar"],
-  ["tortillas", "eggs", "cubed ham", "cheese"]  
-];
-
-// breakfast icons
-var bIcons = [
-  "",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/1543/1543334.svg",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  "https://image.flaticon.com/icons/svg/1182/1182290.svg",
-  "https://image.flaticon.com/icons/svg/142/142882.svg", 
-];
-
-var Icons = [
-  "https://image.flaticon.com/icons/svg/135/135516.svg", 
-  "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
-  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-  ];
-
-
-function populate(days) {
+ function populate(days) {
   var day = new Date(); 
 
   // if (sessionStorage.length < 1) {
@@ -101,10 +105,16 @@ function populate(days) {
 // }
 
 
-// this function checks the list of ingredients and returns true if the ingredient is in the list and false if it is not.
+// this function checks the list of ingredients and common ingredients and returns true if the ingredient is in the list and false if it is not.
 function inList(item) { 
   for (k = 0; k < parseInt(sessionStorage.getItem('iCounter')); k++) { 
     if (sessionStorage.getItem(k) == item) { 
+      return true;
+    }
+  }
+
+  for (k = 0; k < commonIngredients.length; k++) { 
+    if (item == commonIngredients[k]) { 
       return true;
     }
   }
