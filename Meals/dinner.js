@@ -108,7 +108,7 @@ function storeAMeal(dinnerMeal, index) {
     //object method
     getIngredients: function() { 
       var myDiv = document.createElement('ul');
-      var dayDin = document.getElementsByClassName('dinner');
+      var dayDin = document.getElementsByClassName('back');
 
       for (i = 0; i < this.ingredient.length; i++) { 
         if (this.ingredient[i].length > 1) { 
@@ -128,6 +128,7 @@ function storeAMeal(dinnerMeal, index) {
       }
       // dayDin[index].appendChild(myDiv);
       dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[5]);
+//      document.getElementById('box').replaceChild(myDiv, dayDin[index].childNodes[5]);
     }
 
   }
@@ -140,6 +141,7 @@ function storeAMeal(dinnerMeal, index) {
 function addAMeal(dinner, index) {
   //create object
   var din = document.getElementsByClassName('dinner');
+  var back = document.getElementsByClassName('back');
   
     //create a div
     var myDiv = document.createElement('div');
@@ -147,7 +149,17 @@ function addAMeal(dinner, index) {
     var myH2 = document.createElement('h2');
     din[index].style.backgroundImage = "url("+dinner.picture+")";
     din[index].style.backgroundSize = "cover";
+    back[index].style.backgroundImage = "url("+dinner.picture+")";
+    back[index].style.backgroundSize = "cover";
+    
+    //add ingredients
+    var myPara4 = document.createElement('p');
+    myPara4.textContent = "Ingredients:";
+    back[index].replaceChild(myPara4, back[index].childNodes[3]);
+    // myDiv.replaceChild(myPara4, myDiv.childNodes[3]);
+    dinner.getIngredients();
 
+    //add directions, and link
     var myPara1 = document.createElement('p');
     var myPara2 = document.createElement('a');
     var myPara3 = document.createElement('p');
@@ -168,12 +180,5 @@ function addAMeal(dinner, index) {
     }
     // din[index].appendChild(myDiv);
     din[index].replaceChild(myDiv, din[index].childNodes[4]);
-
-    //add ingredients
-    var myPara4 = document.createElement('p');
-    myPara4.textContent = "Ingredients:";
-    myDiv.appendChild(myPara4);
-    // myDiv.replaceChild(myPara4, myDiv.childNodes[3]);
-    dinner.getIngredients();
 
 }

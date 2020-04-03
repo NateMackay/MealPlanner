@@ -1,10 +1,10 @@
 
-body { 
+body {
   margin: 4%;
   background-color: rgb(241, 232, 231);
 }
 
-.breakfast, .lunch, .dinner {
+.breakfast, .lunch, .dinner, .back {
   background-color: #F41501;
   min-height: 20px;
   margin: 5px;
@@ -14,7 +14,7 @@ body {
   text-align: center;
 }
 
-.snack1, .snack2 { 
+.snack1, .snack2 {
   background-color: rgb(80, 0, 0);
   color: white;
   min-height: 20px;
@@ -30,7 +30,7 @@ body {
   margin: 1px;
 }
 
-#listOfIngredients { 
+#listOfIngredients {
   background-color: blue;
   min-height: 20px;
   margin: 5px;
@@ -41,23 +41,23 @@ body {
   visibility: hidden;
 }
 
-h1 { 
+h1 {
   margin-bottom: 2px;
   margin-top: 30px;
 }
 
-h2 { 
+h2 {
   margin: 6px;
 }
 
-h3 { 
+h3 {
   margin: 2px;
 }
-h1, h2, h3 { 
+h1, h2, h3 {
   text-align: center;
 }
 
-h4 { 
+h4 {
   margin: 5px 10px;
 }
 
@@ -66,25 +66,30 @@ button {
   background-color: cornflowerblue;
 }
 
-#button { 
+#button {
   padding: 70px 60;
   text-align: center;
 }
 
 /* animated button */
-#populate { 
+#populate {
   height: 40px;
   cursor: pointer;
 }
 
 /* button animation */
-@keyframes press { 
+@keyframes press {
   from {font-size: 100%;}
   to   {font-size: 200%;}
 }
 
+@keyframes flip { 
+   0%  {visibility: hidden; }
+  50%  {visibility: initial;}
+}
+
 /* division holding the days of the week.For swiping right and left. */
-#swiper { 
+#swiper {
   align-items: stretch;
   display: flex;
   overflow-y: hidden;
@@ -96,38 +101,39 @@ button {
 }
 
 /* initial section values */
-section { 
+section {
   min-width: 100%;
   width: 100%;
-  width: calc(100%/var(--sectionNumber)); 
+  width: calc(100%/var(--sectionNumber));
   user-select: none;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
   /* for screens largeer than 1500 */
 @media screen and (min-width: 1500px) {
-  section { 
+  section {
     min-width: initial;
   }
 
-  h2, h3 { 
+  h2, h3 {
     font-size: 110%;
   }
 
-  p, ul { 
+  p, ul {
     font-size: 80%;
   }
 }
 
-.dinner h2 { 
-  margin: 30px;
+.dinner h2 {
+  margin: 10px;
   color: #FFC7C2;
   text-shadow: 2px 2px 5px #000000;
 }
 
-.dinner p, .dinner a, .dinner ul { 
+.dinner p, .dinner a, .dinner ul {
   color: white;
-  text-shadow: 1px 1px 5px #000000;
+  font-weight: bold;
+  text-shadow:  0px  0px 3px #000000;
   margin: 5px;
 }
 
@@ -136,46 +142,65 @@ p {
   margin: 5px;
 }
 
-ul { 
+ul {
   margin: auto;
   list-style: none;
   text-align: left;
+  text-shadow: 0px 0px 2px white;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 400px) {
-  h2 { 
+  h2 {
     font-size: 125%;
   }
 }
 
-/* 
 
-.flip { 
+
+.flip {
   margin: 0 auto;
 }
 
 
-
-
-.box { 
+.box {
   /* width: 240px;
-  height: 240px; 
+  height: 240px;  */
   position: relative;
+  /* transform-style: preserve-3d; */
+  /* transition: transform 2s; */
+  perspective: 1000px;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 2s;
+  /* transition: flip 2s; */
   transform-style: preserve-3d;
-  transition: transform 4s;
 }
 
-.box:hover{ 
-  transform: rotateZ(360deg);
+.back {
+  /* visibility: hidden; */
+  transform: rotateX('0deg');
+  backface-visibility: hidden;
+  /* background-color: transparent; */
+  /* transform: scaleX(-1); */
+  transform: rotateY(180deg);
+  /* flex-direction: row-reverse; */
+  /* transform: scale(-1, 1); */
+  /* backface-visibility: hidden; */
+  /* backface-visibility: visible; */
+  /* background-image: url('https://thumbs.dreamstime.com/b/easy-pleasant-smile-colored-emoji-sticker-icon-element-mobile-concept-web-apps-illustration-white-background-137182140.jpg'); */
 }
 
-.front { 
+.front {
   backface-visibility: hidden;
   position: absolute;
 }
 
-.back { 
-  transform: rotateY(180deg);
-  background-image: url('https://thumbs.dreamstime.com/b/easy-pleasant-smile-colored-emoji-sticker-icon-element-mobile-concept-web-apps-illustration-white-background-137182140.jpg');
-}
- */
+
+
+

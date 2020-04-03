@@ -71,11 +71,18 @@
       </div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>  
       </div>
-
     </section>
 
     <!-- Monday -->
@@ -93,10 +100,17 @@
       </div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
-
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -115,10 +129,18 @@
       </div>
       <div class="snack2"></div>
   
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
+    </div>
     </section>
   
     <!-- Wednesday -->
@@ -136,9 +158,17 @@
       </div>
       <div class="snack2"></div>
   
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -157,15 +187,17 @@
       </div>
       <div class="snack2"></div>
 
-      <div class="dinnerAll box" onclick="rotate()" id="box">
-          <div class="dinner front">
-            <h3>Dinner</h3>
-            <p ></p><ul></ul>
-          </div>
-          <div class="back">
-            <h3>Dinner</h3>
-            <p></p><div></div><ul></ul>
-          </div>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h  3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -184,9 +216,16 @@
       </div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+      </div>
       </div>
     </section>
     
@@ -205,9 +244,17 @@
       </div>
       <div class="snack2"></div>
       
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="rotate(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="back">
+          <!-- <h3>Dinner</h3>   -->
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>
       </div>
     </section>
       
@@ -217,9 +264,10 @@
     <ul id="listOfIngredients"></ul>
   </div>
 
-
-  <script src="menu.js"></script>
+  <script src="nav.js"></script>
   <script src="meals.js"></script>
+  <script src="breakfast.js"></script>
+  <script src="lunch.js"></script>
   <script src="dinner.js"></script>
   <script src="snack.js"></script>
 
@@ -229,9 +277,18 @@
   </script>
 
   <script>
-    function rotate() { 
-      document.getElementById('box').style.transform = 'rotateX(360deg)';
+    function rotate(box) { 
+      // var box = document.getElementById('box');
 
+      if (box.style.transform != 'rotateY(180deg)') {
+        box.childNodes[3].style.transform = 'flip 1s';
+        box.style.transform = 'rotateY(180deg)';
+        // box.childNodes[3].style.visibility = "visible";
+      } else {
+        // box.childNodes[3].style.visibility = "hidden";
+        box.style.transform = 'rotateY(0deg)';
+        box.childNodes[3].style.transform = 'rotateY(180deg)';
+      }
     }
   </script>
     
