@@ -1,7 +1,7 @@
 
 // lunch meals
 var lunchMWF = ["bagel", "corndog", "ramen"];
-var lunchO   = ["quesadillas", "cold cereal", "peanut butter & jelly sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
+var lunchO   = ["quesadillas", "cold cereal", "pb & j sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
 
 // alternate lunch meals 
 var lMeals = ["mac & cheese", "burritos", "hot dogs"];
@@ -94,10 +94,10 @@ function addLunches() {
     //add an alternate meal to the back of the card 
     var title = document.createElement('h4');
     title.innerHTML = "or";
-    back[i].appendChild(title);
+    back[i].replaceChild(title, back[i].childNodes[0]);
 
     var l = document.createElement('p');
     l.innerHTML = lMeals[(i + sunday) % lMeals.length];
-    back[i].appendChild(l);
+    back[i].replaceChild(l, back[i].childNodes[1]);
   }
 }

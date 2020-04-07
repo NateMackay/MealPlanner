@@ -34,24 +34,18 @@ var dinnerMeals = ['{"meals":[{  "idMeal":"0",  "strMeal":"Salad bar",  "strInst
 ];
 
 
-var ids = [ "52823", "52811", "52869", "52876", "52937", "52841", "52962", "52945"];
-// var ids = ["1", "2"];
-
 function displayDinner(index) {
   var day = new Date(); 
   var sunday = parseInt(localStorage.sunday);
 
   //store the dinner meal 
   storeAMeal((dinnerMeals[(parseInt(sunday) + parseInt(index)) % dinnerMeals.length]), index);
-
 };
-
 
 //stores the json information into a javaScript object, displays the object, and stores it in localStorage 
 function storeAMeal(dinnerMeal, index) { 
   var dinner = JSON.parse(dinnerMeal);
 
-  // console.log(dinner.meals[0].strMeal);
   //create a meal object
   var meal = { 
     id: dinner.meals[0].idMeal, 
@@ -126,13 +120,9 @@ function storeAMeal(dinnerMeal, index) {
         }
 
       }
-      // dayDin[index].appendChild(myDiv);
       dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[3]);
-//      document.getElementById('box').replaceChild(myDiv, dayDin[index].childNodes[5]);
     }
-
   }
-  // console.log(meal);
   sessionStorage.setItem(dinner.meals[0].strMeal, JSON.stringify(meal));
   addAMeal(meal, index);
 };
@@ -156,7 +146,6 @@ function addAMeal(dinner, index) {
     var myPara4 = document.createElement('p');
     myPara4.textContent = "Ingredients:";
     back[index].replaceChild(myPara4, back[index].childNodes[2]);
-    // myDiv.replaceChild(myPara4, myDiv.childNodes[3]);
     dinner.getIngredients();
 
     //add directions, and link
@@ -173,12 +162,9 @@ function addAMeal(dinner, index) {
 
     //attach the newly created elements to the parent element
     myDiv.appendChild(myH2);
-    //myDiv.appendChild(myPara1);
     if (dinner.youtubeLink != ' ') {
       myDiv.appendChild(myPara2);
     }
     myDiv.appendChild(myPara3);
-    // din[index].appendChild(myDiv);
     din[index].replaceChild(myDiv, din[index].childNodes[4]);
-
 }

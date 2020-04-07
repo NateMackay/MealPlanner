@@ -1,5 +1,5 @@
 
-//navigation functions
+// navigation functions
 // This will display/hide the navigation menu
 function switchNav() { 
   var width = screen.width * 0.8;

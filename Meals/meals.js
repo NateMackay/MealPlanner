@@ -6,7 +6,7 @@ var commonIngredients = [
   "flour", "sugar", "baking powder", "salt", "oil", "ramen", "black pepper", "beef broth", "worcestershire sauce", "parsley", "oregano", "water", "chicken broth", "thyme", "baking soda", "tomato sauce", "garlic powder", "basil", "Italian seasoning", "chili powder", "olive oil", "brown sugar", "dry mustard", "baked beans", "milk", "salad dressing", "black beans", "curry", "mayonnaise", "lemon juice", "evaporated milk", "marjoram", "vegetable broth", "nutmeg", "italian seasoning", "tomato paste", "salsa"
 ];
 
- function populate(days) {
+function populate(days) {
   var day = new Date(); 
 
   addDates(days);
@@ -46,33 +46,6 @@ function inList(item) {
   
   return false;
 };
-
-// this modifies the design of the page
-function changeLayout() { 
-  // document.getElementById('swiper').style.display = "inherit";
-
-  for (var i = 0; i < document.getElementsByTagName('h1').length; i++) { 
-    document.getElementsByTagName('h1')[i].style.marginBottom = "2px";
-    document.getElementsByTagName('h1')[i].style.marginTop = "30px";
-  }
-  for (var i = 0; i < document.getElementsByTagName('h2').length; i++) { 
-    document.getElementsByTagName('h2')[i].style.margin = "6px";
-  }
-  for (var i = 0; i < document.getElementsByTagName('h3').length; i++) { 
-    document.getElementsByTagName('h3')[i].style.margin = "3px";
-  }
-  for (var i = 0; i < document.getElementsByTagName('p').length; i++) { 
-    document.getElementsByTagName('p')[i].style.margin = "5px";
-  }
-  document.getElementById('hamburgerIcon').style.paddingTop = '0px';
-  document.getElementById('hamburgerIcon').style.position = 'absolute'; 
-
-  document.getElementById('populate').style.display = 'none';
-  
-  //if (document.getElementById('mySidenav').style.width == "") {
-    document.getElementById('mySidenav').style.width = '0px';
-  //}
-}
 
 //this function adds the date to each day
 function addDates(next) { 
