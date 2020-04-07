@@ -108,7 +108,7 @@ function storeAMeal(dinnerMeal, index) {
     //object method
     getIngredients: function() { 
       var myDiv = document.createElement('ul');
-      var dayDin = document.getElementsByClassName('back');
+      var dayDin = document.getElementsByClassName('dinnerBack');
 
       for (i = 0; i < this.ingredient.length; i++) { 
         if (this.ingredient[i].length > 1) { 
@@ -127,7 +127,7 @@ function storeAMeal(dinnerMeal, index) {
 
       }
       // dayDin[index].appendChild(myDiv);
-      dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[5]);
+      dayDin[index].replaceChild(myDiv, dayDin[index].childNodes[3]);
 //      document.getElementById('box').replaceChild(myDiv, dayDin[index].childNodes[5]);
     }
 
@@ -141,7 +141,7 @@ function storeAMeal(dinnerMeal, index) {
 function addAMeal(dinner, index) {
   //create object
   var din = document.getElementsByClassName('dinner');
-  var back = document.getElementsByClassName('back');
+  var back = document.getElementsByClassName('dinnerBack');
   
     //create a div
     var myDiv = document.createElement('div');
@@ -155,7 +155,7 @@ function addAMeal(dinner, index) {
     //add ingredients
     var myPara4 = document.createElement('p');
     myPara4.textContent = "Ingredients:";
-    back[index].replaceChild(myPara4, back[index].childNodes[3]);
+    back[index].replaceChild(myPara4, back[index].childNodes[2]);
     // myDiv.replaceChild(myPara4, myDiv.childNodes[3]);
     dinner.getIngredients();
 
@@ -174,10 +174,10 @@ function addAMeal(dinner, index) {
     //attach the newly created elements to the parent element
     myDiv.appendChild(myH2);
     //myDiv.appendChild(myPara1);
-    myDiv.appendChild(myPara3);
     if (dinner.youtubeLink != ' ') {
       myDiv.appendChild(myPara2);
     }
+    myDiv.appendChild(myPara3);
     // din[index].appendChild(myDiv);
     din[index].replaceChild(myDiv, din[index].childNodes[4]);
 

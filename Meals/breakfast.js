@@ -2,8 +2,8 @@
 var bMeals = ["fun", "oatmeal", "omlets & toast", "oatmeal", "pancakes", "german pancakes", "breakfast burritos"
 ];
 
-// breakfast meals not used 
-//var bMeals = ["cereal", "eggs", "coffee cake", "waffles" ];
+// optional breakfast meals 
+var bMeals2 = ["cereal", "eggs", "coffee cake", "waffles" ];
 
 // breakfast ingredients
 var bIngredients = [
@@ -27,20 +27,20 @@ var bIcons = [
   "https://image.flaticon.com/icons/svg/142/142882.svg", 
 ];
 
-// unused icons
-// var Icons = [
-//   "https://image.flaticon.com/icons/svg/135/135516.svg", 
-//   "https://image.flaticon.com/icons/svg/352/352702.svg", 
-//   "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
-//   "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-//   ];
+// option breakfast meal icons
+var Icons = [
+  "https://image.flaticon.com/icons/svg/135/135516.svg", 
+  "https://image.flaticon.com/icons/svg/352/352702.svg", 
+  "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
+  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+  ];
 
 function addBreakfasts() { 
   var breakfast = document.getElementsByClassName('breakfastMeal'); 
-  var sunday = parseInt(localStorage.sunday);
+  var back = document.getElementsByClassName('otherBreakfast');
 
   for (var i = 0; i < 7; i++) {
-    // console.log('breakfast' + i);
+    //add the breakfast elements 
     var icon = document.createElement('img');
     icon.setAttribute('src', bIcons[(i + 0) % bIcons.length]);
     breakfast[i].innerHTML = bMeals[(i + 0) % bMeals.length]; 
@@ -49,9 +49,9 @@ function addBreakfasts() {
     breakfast[i].appendChild(icon);
     breakfast[i].style.display = "inline-flex";
 
+    //add ingredients to the grocery list
     var j = 0;
     while (bIngredients[i][j]) { 
-     // console.log(sessionStorage.iCounter);
       if (inList(bIngredients[i][j])) {
         // don't add it to the list if it already exists
         j++;
@@ -61,6 +61,19 @@ function addBreakfasts() {
         j++;
       }
     }
+
+    //add the additional breakfast meals 
+    var title = document.createElement('h3');
+    title.innerHTML = "alternate meal";
+    back[i].appendChild(title);
+
+    var icon = document.createElement('img');
+    icon.setAttribute('src', Icons[(i + 0) % Icons.length]);
+    back[i].innerHTML = bMeals2[(i + 0) % bMeals2.length]; 
+    icon.setAttribute("height", "25px");
+    icon.setAttribute("style", "margin: 0px 10px");
+    back[i].appendChild(icon);
+    back[i].style.display = "inline-flex";
   }
 }
 

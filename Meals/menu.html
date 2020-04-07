@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Meal Plan</title>
-
     <link rel="stylesheet" type="text/css" href="nav.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="flip.css">
+
   </head>
 
-<body onload="populate(0)">
+<body onload="populate(0)"> 
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
-    <a id="demo"></a>
+    <!-- <a id="demo"></a> -->
     <a onclick="toggleIngredients(true, 'This'); goTo('sunday'); switchNav();">Sunday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('monday'); switchNav();">Monday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('tuesday'); switchNav();">Tuesday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('wednesday'); switchNav();">Wednesday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
-    <a onclick="toggleIngredients(true, 'This'); goTo('friday'); switchNav();">Friday</a>
+    <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
     <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
     <a></a>
@@ -31,17 +32,14 @@
     <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
     <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
     <a></a>
-    <a></a>
-    <a></a>
-    <a></a>
   </div>
 
   <!-- icon to open the sidenav -->
   <div id="hamburgerIcon"> 
     <span class="navIcon" onclick="switchNav()" style="display: block;">
-      <canvas class="bar1" >Canvas cannot display in this browswer.</canvas>
-      <canvas class="bar2" >Canvas cannot display in this browswer.</canvas>
-      <canvas class="bar3" >Canvas cannot display in this browswer.</canvas>
+      <canvas class="bar1" >Canvas cannot display in this browser.</canvas>
+      <canvas class="bar2" >Canvas cannot display in this browser.</canvas>
+      <canvas class="bar3" >Canvas cannot display in this browser.</canvas>
     </span>
   </div>
 
@@ -51,159 +49,496 @@
     <!-- Sunday -->
     <section id="sunday" class="day">
       <h2 onclick="switchNav()" class="date">Sunday</h2>
+      
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+    
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+            
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
+      </div>
+
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+    
+
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="inner" onclick="flip(this)">
       <div class="breakfast">
         <h3>Breakfast</h3>
         <p class="breakfastMeal"></p>
-      </div>
+      </div><div class="otherBreakfast"></div></div></div>
 
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
-      </div>
-
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+        </div>
+      </div>  
+      </div> -->
     </section>
 
     <!-- Monday -->
     <section id="monday" class="day">
       <h2 onclick="switchNav()" class="date">Monday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
+      
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
       </div>
 
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div><div class="otherBreakfast"></div></div></div>
+
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
-
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
+      </div> -->
     </section>
 
     <!-- Tuesday -->
     <section id="tuesday" class="day">
       <h2 onclick="switchNav()" class="date">Tuesday</h2>
-      <div class="breakfast">
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
+      </div>
+
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast">
         <h3>Breakfast</h3>
         <p class="breakfastMeal"></p>
-      </div>
+      </div><div class="otherBreakfast"></div></div></div>
   
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
   
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
+    </div> -->
     </section>
   
     <!-- Wednesday -->
     <section id="wednesday" class="day">
       <h2 onclick="switchNav()" class="date">Wednesday</h2>
-      <div class="breakfast">
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
+      </div>
+
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast">
         <h3>Breakfast</h3>
         <p class="breakfastMeal"></p>
-      </div>
+      </div><div class="otherBreakfast"></div></div></div>
   
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
   
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
+      </div> -->
     </section>
 
     <!-- Thursday -->
     <section id="thursday" class="day">
       <h2 onclick="switchNav()" class="date">Thursday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
       </div>
 
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div><div class="otherBreakfast"></div></div></div>
+
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
 
       <div class="dinnerAll box">
-          <div class="dinner front">
-            <h3>Dinner</h3>
-            <p ></p><div></div><ul></ul>
-          </div>
-          <div class="back">
-            <h3>Dinner</h3>
-            <p></p><div></div><ul></ul>
-          </div>
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
+      </div> -->
     </section>
 
     <!-- Friday -->
     <section id="friday" class="day">
       <h2 onclick="switchNav()" class="date">Friday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snack1"></div>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
       </div>
 
+      <div class="snack2"></div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="box"><div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast front">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div><div class="otherBreakfast"></div></div></div></div>
+      <h1></h1>
+
       <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
+      <div class="lunch front">
+        <h3>Lunch</h3>
+        <p class="lunchMeal"><img><span></span></p>
+      </div><div class="otherLunch"></div></div></div>
+      <div class="snack2"></div>
+      <h1></h1>
+
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          
+          <p></p><div></div><ul></ul>
+      </div>
+      </div> -->
+    </section>
+
+    <!-- Saturday -->
+  <!--  <section id="saturday" class="day">
+      <h2 onclick="switchNav()" class="date">Saturday</h2>
+      <div class="box"><div class="inner" onclick="flip(this)">
+        <div class="breakfast">
+        <h3>Breakfast</h3>
+        <p class="breakfastMeal"></p>
+      </div><div class="otherBreakfast"></div></div></div>
+
+      <div class="snack1"></div>
+      <div class="box"><div class="inner" onclick="flip(this)">
       <div class="lunch">
         <h3>Lunch</h3>
         <p class="lunchMeal"><img><span></span></p>
-      </div>
+      </div><div class="otherLunch"></div></div></div>
       <div class="snack2"></div>
 
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p ></p><div></div><ul></ul>
+      <div class="dinnerAll box">
+      <div class="inner" onclick="flip(this)">
+        <div class="dinner front">
+          <h3>Dinner</h3>
+          <p ></p><ul></ul>
+        </div>
+        <div class="dinnerBack">
+          <p></p><div></div><ul></ul>
+        </div>
       </div>
-    </section>
-    
-    <!-- Saturday -->
+      </div>
+    </section> -->
+
+
+          <!-- Saturday -->
     <section id="saturday" class="day">
       <h2 onclick="switchNav()" class="date">Saturday</h2>
-      <div class="breakfast">
-        <h3>Breakfast</h3>
-        <p class="breakfastMeal"></p>
+      <div class="flip-card breakfast">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Breakfast</h3>
+            <p class="breakfastMeal"></p>
+    
+          </div>
+          <div class="flip-card-back">
+            <h3>alternate meal</h3>
+            <p class="otherBreakfast"></p>
+          </div>
+        </div>
       </div>
       
       <div class="snack1"></div>
-      <div class="lunch">
-        <h3>Lunch</h3>
-        <p class="lunchMeal"><img><span></span></p>
+      <div class="flip-card lunch">
+        <div class="flip-card-inner" onclick="flip(this)">
+          <div class="flip-card-front">
+            <h3>Lunch</h3>
+            <p class="lunchMeal"><img><span></span></p>
+            
+          </div>
+          <div class="flip-card-back otherLunch">
+          </div>
+        </div>
       </div>
+
       <div class="snack2"></div>
-      
-      <div class="dinner">
-        <h3>Dinner</h3>
-        <p></p><div></div><ul></ul>
-      </div>
+        <div class="flip-card dinnerAll">
+          <div class="flip-card-inner" onclick="flip(this)">
+            <div class="flip-card-front dinner front">
+              <h3>Dinner</h3>
+              <p ></p><ul></ul>
+    
+
+            </div>
+            <div class="flip-card-back dinnerBack">
+              <p></p><div></div><ul></ul>
+            </div>
+          </div>
+        </div>
+
     </section>
-      
-  </div> 
+  </div>
 
   <div>
     <ul id="listOfIngredients"></ul>
@@ -215,11 +550,13 @@
   <script src="lunch.js"></script>
   <script src="dinner.js"></script>
   <script src="snack.js"></script>
+  <script src="flip.js"></script>
 
-  <script>
-    document.getElementById("demo").innerHTML = 
-    "Screen width is " + screen.width;
-  </script>
+  <!-- <script>
+    function jobs() {
+      var b = document.getElementsByClassName('breakfast');
+    };
+  </script> -->
     
 </body>
 </html>

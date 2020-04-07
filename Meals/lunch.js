@@ -1,9 +1,10 @@
 
-// unused lunch meals 
-//var lMeals = ["ramen", "bagels", "sandwiches", "quesidillas", "bagels", "toast & applesauce", "sandwiches", "ramen", "bagels", "sandwiches", "quesidillas"];
-
+// lunch meals
 var lunchMWF = ["bagel", "corndog", "ramen"];
 var lunchO   = ["quesadillas", "cold cereal", "peanut butter & jelly sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
+
+// alternate lunch meals 
+var lMeals = ["mac & cheese", "burritos", "hot dogs"];
 
 // lunch icons 
 var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
@@ -19,6 +20,7 @@ var lIconMWF = ["https://image.flaticon.com/icons/png/512/1231/premium/1231662.p
 var lIcon     = ["https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/2285/2285997.svg", "https://image.flaticon.com/icons/png/512/189/189122.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png"
 ];
 
+// ingredients
 var lIngredientsMWF = [
   ["bagels", "cream cheese"],
   ["corndogs"],
@@ -35,6 +37,7 @@ var lIngredients = [
 
 function addLunches() { 
   var lunch = document.getElementsByClassName('lunchMeal'); 
+  var back  = document.getElementsByClassName('otherLunch');
   var sunday = parseInt(localStorage.sunday);
 
   for (var i = 0; i < 7; i++) {
@@ -78,7 +81,6 @@ function addLunches() {
       //add the ingredients
       var j = 0;
       while (lIngredients[(i + sunday) % lIcon.length][j]) { 
-       // console.log(sessionStorage.iCounter);
         if (inList(lIngredients[(i + sunday) % lIcon.length][j])) {
           // don't add it to the list if it already exists
           j++;
@@ -88,9 +90,14 @@ function addLunches() {
           j++;
         }
       }
-  
-
     }
+    //add an alternate meal to the back of the card 
+    var title = document.createElement('h4');
+    title.innerHTML = "or";
+    back[i].appendChild(title);
 
+    var l = document.createElement('p');
+    l.innerHTML = lMeals[(i + sunday) % lMeals.length];
+    back[i].appendChild(l);
   }
 }
