@@ -23,12 +23,13 @@
     <a onclick="goTo('friday'); switchNav();">Friday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
     <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
+    <a onclick="addChefs(); switchNav()">Show chefs</a>
     <a></a>
-    <!-- <a class="menu" onclick=""><u>Menus</u></a> -->
+    
     <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
     <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's Menu</a>
     <a></a>
-    <!-- <a class="menu" onclick=""><u>Grocery Lists</u></a> -->
+    
     <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
     <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
     <a></a>
@@ -348,6 +349,7 @@
   <script src="dinner.js"></script>
   <script src="snack.js"></script>
   <script src="flip.js"></script>
+  <script src="chef.js"></script>
     
 </body>
 </html>

@@ -1,9 +1,9 @@
 
-var bMeals = ["fun", "oatmeal", "omlets & toast", "oatmeal", "pancakes", "german pancakes", "breakfast burritos"
-];
+//var bMeals = ["fun", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
+var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
 
 // optional breakfast meals 
-var bMeals2 = ["cereal", "eggs", "coffee cake", "waffles" ];
+var bMeals2 = ["cereal *", "eggs *", "coffee cake", "waffles" ];
 
 // breakfast ingredients
 var bIngredients = [
@@ -18,7 +18,9 @@ var bIngredients = [
 
 // breakfast icons
 var bIcons = [
-  "",
+//  "",
+  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1543/1543334.svg",
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
@@ -43,9 +45,10 @@ function addBreakfasts() {
     //add the breakfast elements 
     var icon = document.createElement('img');
     icon.setAttribute('src', bIcons[(i + 0) % bIcons.length]);
-    breakfast[i].innerHTML = bMeals[(i + 0) % bMeals.length]; 
+    var text = document.createElement('div');
+    text.innerHTML = bMeals[(i + 0) % bMeals.length]; 
     icon.setAttribute("height", "25px");
-    icon.setAttribute("style", "margin: 0px 10px");
+    breakfast[i].appendChild(text);
     breakfast[i].appendChild(icon);
     breakfast[i].style.display = "inline-flex";
 

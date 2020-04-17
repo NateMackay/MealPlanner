@@ -95,7 +95,7 @@ section {
 
 p {
   color: #FFC7C2;
-  margin: 5px;
+  margin: 0px 5px 5px;
   text-shadow:  0px  0px 3px #000000;
 }
 
@@ -105,6 +105,17 @@ ul {
   text-align: left;
   /* text-shadow: 0px 0px 2px white; */
   font-weight: bold;
+}
+
+.chef { 
+  height: 35px;
+}
+
+.breakfastMeal img, .breakfastMeal div, 
+.lunchMeal span, .lunchMeal img {
+  margin: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* for screens larger than 1500 */

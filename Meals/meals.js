@@ -21,7 +21,7 @@ function populate(days) {
   for (var i = 0; i < 7; i++) { 
     displayDinner(i);
   }
-
+  
   if (days < 1) {
     // display today's meals
     goTo(week[day.getDay()]);

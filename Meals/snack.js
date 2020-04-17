@@ -1,6 +1,6 @@
 
-var sn1 = [ "peanut butter", "graham crackers & milk", "protein bar & almonds", "hard boiled egg", "fruit", "applesauce & cottage cheese", "nuts & string cheese", "toast & yogurt"];
-var sn2 = ["orange & cheese", "veggies & dip", "peanut butter toast", "yogurt", "protein bar", "hard boiled egg", "fruit"];
+var sn1 = [ "peanut butter *", "graham crackers & milk", "protein bar & almonds *", "hard boiled egg *", "fruit *", "applesauce & cottage cheese *", "nuts & string cheese *", "toast & yogurt"];
+var sn2 = ["orange & cheese *", "veggies & dip *", "peanut butter toast", "yogurt *", "protein bar *", "hard boiled egg *", "fruit *"];
 
 function addSnacks() {
   var snack1 = document.getElementsByClassName('snack1');

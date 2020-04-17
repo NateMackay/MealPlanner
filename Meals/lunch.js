@@ -1,10 +1,11 @@
 
 // lunch meals
 var lunchMWF = ["bagel", "corndog", "ramen"];
-var lunchO   = ["quesadillas", "cold cereal", "pb & j sandwiches", "applesauce & toast", "ham & cheese sandwiches"];
+var lunchO   = ["quesadillas", "cold cereal *", "pb & j sandwiches", "applesauce * & toast", "ham & cheese sandwiches"];
 
-// alternate lunch meals 
-var lMeals = ["mac & cheese", "burritos", "hot dogs"];
+// alternate lunch meals (gluten-free)
+var lMeals = ["chips & cheese *", "bagel *"]
+//var lMeals = ["mac & cheese", "burritos", "hot dogs"];
 
 // lunch icons 
 var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png", 
@@ -45,7 +46,6 @@ function addLunches() {
       var icon = document.createElement('img');
       icon.setAttribute('src', lIconMWF[(i + sunday) % lIconMWF.length]);
       icon.setAttribute("height", "30px");
-      icon.setAttribute("style", "margin: 0px 10px");
       lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
   
       var text = document.createElement('span');
@@ -70,7 +70,6 @@ function addLunches() {
       var icon = document.createElement('img');
       icon.setAttribute('src', lIcon[(i + sunday) % lIcon.length]);
       icon.setAttribute("height", "30px");
-      icon.setAttribute("style", "margin: 0px 10px");
       lunch[i].replaceChild(icon, lunch[i].childNodes[0]);
 
       var text = document.createElement('span');
