@@ -41,6 +41,7 @@ function addBreakfasts() {
   var breakfast = document.getElementsByClassName('breakfastMeal'); 
   var back = document.getElementsByClassName('otherBreakfast');
 
+  if (breakfast[0].childElementCount < 1) {
   for (var i = 0; i < 7; i++) {
     //add the breakfast elements 
     var icon = document.createElement('img');
@@ -77,6 +78,7 @@ function addBreakfasts() {
     icon.setAttribute("style", "margin: 0px 10px");
     back[i].appendChild(icon);
     back[i].style.display = "inline-flex";
+  }
   }
 }
 
