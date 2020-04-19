@@ -93,9 +93,13 @@ section {
   margin: 5px;
 }
 
+.lunch span { 
+  font-size: 90%;
+}
+
 p {
   color: #FFC7C2;
-  margin: 0px 5px 5px;
+  margin: 0px 1px 5px;
   text-shadow:  0px  0px 3px #000000;
 }
 
@@ -108,12 +112,14 @@ ul {
 }
 
 .chef { 
+  display: inline;
   height: 35px;
 }
 
 .breakfastMeal img, .breakfastMeal div, 
-.lunchMeal span, .lunchMeal img {
-  margin: 10px;
+.lunchMeal span, .lunchMeal img, 
+.dinChef img {
+  margin: 4px;
   margin-top: auto;
   margin-bottom: auto;
 }
