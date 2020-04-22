@@ -1,6 +1,6 @@
 
 var family = ["chef/Dad.png", "chef/Mom.png", "chef/Gnat.png", "chef/Ginger.png", "chef/Cool.png", "chef/gmaJ.png", "chef/non.png"];
-var d = [0, 2, 5, 5, 3, 0, 6];
+var d = [0, 2, 5, 3, 5, 0, 6];
 
 function addChefs() {
   var chef = document.getElementsByClassName('chef');

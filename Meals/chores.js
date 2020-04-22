@@ -1,16 +1,14 @@
 
 var family = ["chef/Dad.png", "chef/Mom.png", "chef/Gnat.png", "chef/Ginger.png", "chef/Cool.png", "chef/gmaJ.png", ""];
 
-var empty = [3, 5, 5, 0, 5, 5, 2];
-var clear = [6, 1, 6, 3, 2, 0, 1];
-var wash  = [0, 3, 1, 2, 6, 1, 3];
+var empty = [3, 5, 2, 1, 0, 5, 2];
+var clear = [2, 4, 3, 2, 1, 3, 1];
+var wash  = [0, 3, 1, 5, 2, 1, 3];
 
 function addChores() {
   var chore = document.getElementsByClassName('chore');
 
   if (chore[0] ==  undefined) {
-    // var breakfast = document.getElementsByClassName('breakfastMeal'); 
-    // var lunch     = document.getElementsByClassName('lunchMeal'); 
     var dinner    = document.getElementsByClassName('dinner');
 
     for (var i = 0; i < 7; i++) {
