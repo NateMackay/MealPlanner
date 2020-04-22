@@ -90,7 +90,7 @@ section {
   color: white;
   font-weight: bold;
   text-shadow:  0px  0px 3px #000000;
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .lunch span { 
@@ -111,14 +111,19 @@ ul {
   font-weight: bold;
 }
 
-.chef { 
+.chef, .chore img, .dinner img { 
   display: inline;
   height: 35px;
 }
 
+.chore { 
+  display: inline-flex;
+}
+
 .breakfastMeal img, .breakfastMeal div, 
 .lunchMeal span, .lunchMeal img, 
-.dinChef img {
+.dinChef img, 
+.chore img, .chore div, .chore span{
   margin: 4px;
   margin-top: auto;
   margin-bottom: auto;

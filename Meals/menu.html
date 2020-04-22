@@ -21,9 +21,11 @@
     <a onclick="toggleIngredients(true, 'This'); goTo('wednesday'); switchNav();">Wednesday</a>
     <a onclick="toggleIngredients(true, 'This'); goTo('thursday'); switchNav();">Thursday</a>
     <a onclick="goTo('friday'); switchNav();">Friday</a>
-    <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a>
+    <a onclick="toggleIngredients(true, 'This'); goTo('saturday'); switchNav();">Saturday</a><a></a>
+
     <a onclick="toggleIngredients(true, 'This'); addSnacks(); switchNav();">Add snacks</a>
     <a onclick="addChefs(); switchNav()">Show chefs</a>
+    <a onclick="addChores(); switchNav()">Show dinner cleanup</a>
     <a></a>
     
     <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
@@ -75,7 +77,8 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front"><h3>Dinner</h3>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p></p><ul></ul>
           </div>
           <div class="back dinnerBack">
@@ -116,8 +119,8 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front">
-            <h3>Dinner</h3>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p ></p><ul></ul>
           </div>
           <div class="back dinnerBack">
@@ -159,7 +162,7 @@
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
           <div class="front dinner">
-            <h3>Dinner</h3>
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p ></p><ul></ul>
           </div>
           <div class="back dinnerBack">
@@ -200,8 +203,8 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front">
-            <h3>Dinner</h3>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p ></p><ul></ul>
           </div>
           <div class="back dinnerBack">
@@ -242,8 +245,8 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front">
-            <h3>Dinner</h3>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p ></p><ul></ul>
           </div>
           <div class="back dinnerBack">
@@ -284,8 +287,8 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front">
-            <h3>Dinner</h3>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
             <p ></p><ul></ul>
           </div>
             <div class="back dinnerBack">
@@ -326,9 +329,9 @@
 
       <div class="flip dinnerAll">
         <div class="card" onclick="flip(this)">
-          <div class="front dinner front">
-            <h3>Dinner</h3>
-            <p ></p><ul></ul>
+          <div class="front dinner">
+            <h3><span class="dinChef"></span>Dinner</h3>
+            <p></p><ul></ul>
           </div>
           <div class="back dinnerBack">
             <p></p><div></div><ul></ul>
@@ -350,6 +353,7 @@
   <script src="snack.js"></script>
   <script src="flip.js"></script>
   <script src="chef.js"></script>
+  <script src="chores.js"></script>
     
 </body>
 </html>

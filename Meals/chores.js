@@ -1,35 +1,68 @@
 
-family = ["chore/Dad.png", "chore/Mom.png", "chore/Gnat.png", "chore/Ginger.png", "chore/Cool.png"];
+var family = ["chef/Dad.png", "chef/Mom.png", "chef/Gnat.png", "chef/Ginger.png", "chef/Cool.png", "chef/gmaJ.png", ""];
 
-function addChefs() {
-  var chef = document.getElementsByClassName('chef');
+var empty = [3, 5, 5, 0, 5, 5, 2];
+var clear = [6, 1, 6, 3, 2, 0, 1];
+var wash  = [0, 3, 1, 2, 6, 1, 3];
 
-  if (chef[0] ==  undefined) {
-    var breakfast = document.getElementsByClassName('breakfastMeal'); 
-    var lunch     = document.getElementsByClassName('lunchMeal'); 
+function addChores() {
+  var chore = document.getElementsByClassName('chore');
+
+  if (chore[0] ==  undefined) {
+    // var breakfast = document.getElementsByClassName('breakfastMeal'); 
+    // var lunch     = document.getElementsByClassName('lunchMeal'); 
     var dinner    = document.getElementsByClassName('dinner');
 
     for (var i = 0; i < 7; i++) {
 
-      var bChef = document.createElement('img');
-      bChef.setAttribute('src', family[(i + 0) % family.length]);
-      bChef.setAttribute('class', 'chef');
-      breakfast[i].insertBefore(bChef, breakfast[i].childNodes[0]);
+      // add Empty the dishwasher chore
+      var w = document.createElement('p');
+      w.setAttribute("class", "chore");
 
-      var lChef = document.createElement('img');
-      lChef.setAttribute('src', family[(i + 2) % family.length]);
-      lChef.setAttribute("class", "chef");
-      lunch[i].insertBefore(lChef, lunch[i].childNodes[2]);
+      var sp = document.createElement('div');
+      sp.innerHTML = "Empty the dishwasher";
+      w.appendChild(sp);
+
+      var washDishes = document.createElement('img');
+      washDishes.setAttribute('src', family[empty[i]]);
+      w.appendChild(washDishes);
+      dinner[i].insertBefore(w, dinner[i].childNodes[2]);
+
+      // add Clear the table chore
+      var box = document.createElement('p');
+      var clearWipe = document.createElement('img');
+      clearWipe.setAttribute('src', family[clear[i]]);
+      box.setAttribute('class', 'chore');
+      var sp = document.createElement('span');
+      sp.innerHTML = "Clear/Wipe the table";
+      box.appendChild(clearWipe);
+      box.appendChild(sp);
+      var br = document.createElement('br');
+      box.appendChild(br);
+      dinner[i].insertBefore(box, dinner[i].childNodes[3]);
+
+      // add Wash the dishes chore
+      var w = document.createElement('p');
+      w.setAttribute("class", "chore");
+
+      var sp = document.createElement('div');
+      sp.innerHTML = "Wash dishes";
+      w.appendChild(sp);
+
+      var washDishes = document.createElement('img');
+      washDishes.setAttribute('src', family[wash[i]]);
+      w.appendChild(washDishes);
+      dinner[i].insertBefore(w, dinner[i].childNodes[4  ]);
 
     }
 
-  } else if (chef[0].style.display == "none") {
-    for (var i = 0; i < chef.length; i++) { 
-      chef[i].style.display = "block";
+  } else if (chore[0].style.display == "none") {
+    for (var i = 0; i < chore.length; i++) { 
+      chore[i].style.display = "block";
     }
   } else { 
-    for (var i = 0; i < chef.length; i++) { 
-      chef[i].style.display = "none";
+    for (var i = 0; i < chore.length; i++) { 
+      chore[i].style.display = "none";
     }
   }
 };
