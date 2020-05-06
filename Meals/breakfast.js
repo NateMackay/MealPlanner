@@ -1,9 +1,10 @@
 
-//var bMeals = ["fun", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
 var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
 
 // optional breakfast meals 
-var bMeals2 = ["cereal *", "eggs *", "coffee cake", "waffles" ];
+var bMeals2 = ["cereal *", "eggs *", "oatmeal *", "cereal *", "oatmeal *", "eggs *", "oatmeal *" ];
+
+var unused = [ "coffee cake", "https://image.flaticon.com/icons/svg/1662/1662345.svg" ]
 
 // breakfast ingredients
 var bIngredients = [
@@ -33,8 +34,11 @@ var bIcons = [
 var Icons = [
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/1662/1662345.svg", 
-  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/135/135516.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/352/352702.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg", 
   ];
 
 function addBreakfasts() { 
