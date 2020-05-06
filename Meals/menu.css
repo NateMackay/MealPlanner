@@ -1,6 +1,6 @@
 
 body {
-  margin-top: 0px;
+  margin-top: 10px;
   background-color: rgb(241, 232, 231);
 }
 
@@ -41,6 +41,10 @@ h2, h3 {
   margin: 2px;
 }
 
+h2.date {
+  margin: 10px;
+}
+
 h1, h2, h3 {
   text-align: center;
 }
@@ -61,6 +65,7 @@ button {
 
 /* division holding the days of the week.For swiping right and left. */
 #swiper {
+  margin-top: 10px;
   align-items: stretch;
   display: flex;
   overflow-y: hidden;

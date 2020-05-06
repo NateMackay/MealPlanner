@@ -26,6 +26,6 @@ function switchIcon() {
 // this takes the web page focus to the day selected from the menu
 function goTo(day) { 
   document.getElementById(day).scrollIntoView(); 
-  // document.getElementById('html').scrollIntoView();
+  document.getElementById('html').scrollIntoView();
 }
  
