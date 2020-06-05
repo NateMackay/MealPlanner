@@ -4,7 +4,7 @@ var lunchMWF = ["bagel", "corndog", "ramen"];
 var lunchO   = ["quesadillas", "cold cereal *", "pb & j sandwiches", "applesauce * & toast", "ham & cheese sandwiches"];
 
 // alternate lunch meals (gluten-free)
-var lMeals = ["chips & cheese *", "bagel *", "salad *"]; 
+var lMeals = ["chips & cheese *", "bagel *"]; 
 //var lMeals = ["mac & cheese", "burritos", "hot dogs"];
 
 // lunch icons 

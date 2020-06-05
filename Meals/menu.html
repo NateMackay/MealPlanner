@@ -10,7 +10,7 @@
 
   </head>
 
-<body onload="populate(0)"> 
+<body onload="populate('current')"> 
 
   <!-- popup menu -->
   <div id="mySidenav" class="sidenav">
@@ -28,12 +28,12 @@
     <a onclick="addChores(); switchNav()">Show dinner cleanup</a>
     <a></a>
     
-    <a class="menu" onclick="populate(7); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
-    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate(7); switchNav();">Next week's Menu</a>
+    <a class="menu" onclick="populate('next'); toggleIngredients(false, 'Next'); switchNav();">Next week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'Next'); populate('next'); switchNav();">Next week's Menu</a>
     <a></a>
     
-    <a class="menu" onclick="populate(0); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
-    <a class="menu" onclick="toggleIngredients(true, 'This'); populate(0); switchNav();">This week's Menu</a>
+    <a class="menu" onclick="populate('current'); toggleIngredients(false, 'This'); switchNav();">This week's grocery list</a>
+    <a class="menu" onclick="toggleIngredients(true, 'This'); populate('current'); switchNav();">This week's Menu</a>
     <a></a>
   </div>
 

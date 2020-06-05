@@ -6,10 +6,19 @@ var commonIngredients = [
   "flour", "sugar", "baking powder", "salt", "oil", "ramen", "black pepper", "beef broth", "worcestershire sauce", "parsley", "oregano", "water", "chicken broth", "thyme", "baking soda", "tomato sauce", "garlic powder", "basil", "Italian seasoning", "chili powder", "olive oil", "brown sugar", "dry mustard", "baked beans", "milk", "salad dressing", "black beans", "curry", "mayonnaise", "lemon juice", "evaporated milk", "marjoram", "vegetable broth", "nutmeg", "italian seasoning", "tomato paste", "salsa"
 ];
 
-function populate(days) {
+function populate(displayWeek) {
   var day = new Date(); 
 
-  addDates(days);
+  if (displayWeek == "current") { 
+    days = 0;
+  } else {
+    days = 7;
+  }
+
+  if (sessionStorage.getItem('week') != displayWeek) {
+    addDates(days);
+  }
+  sessionStorage.setItem('week', displayWeek);
 
   // add seven breakfasts 
   addBreakfasts();
@@ -99,7 +108,8 @@ function displayIngredients(week) {
   
   // add the list of ingredients
   var i = 0;
-  while (sessionStorage.getItem(i)) {
+  // while (sessionStorage.getItem(i)) {
+  while (i < parseInt(sessionStorage.getItem('iCounter'))) {
     var li = document.createElement('li');
     li.innerHTML = sessionStorage.getItem(i);
     li.setAttribute('onclick', 'lineThrough(this)');

@@ -83,6 +83,8 @@ function addBreakfasts() {
     back[i].appendChild(icon);
     back[i].style.display = "inline-flex";
   }
+  } else {
+    sessionStorage.setItem('iCounter', 8);
   }
 }
 
