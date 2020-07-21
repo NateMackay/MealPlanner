@@ -27,7 +27,7 @@ var bIcons = [
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
   "https://image.flaticon.com/icons/svg/1182/1182290.svg",
-  "https://image.flaticon.com/icons/svg/142/142882.svg", 
+  "https://image.flaticon.com/icons/svg/142/142882.svg" 
 ];
 
 // option breakfast meal icons
@@ -38,7 +38,7 @@ var Icons = [
   "https://image.flaticon.com/icons/svg/135/135516.svg", 
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg" 
   ];
 
 function addBreakfasts() { 
