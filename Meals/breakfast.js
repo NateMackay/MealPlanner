@@ -19,9 +19,7 @@ var bIngredients = [
 
 // breakfast icons
 var bIcons = [
-//  "",
   "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1543/1543334.svg",
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
