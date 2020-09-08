@@ -117,7 +117,7 @@ ul {
 }
 
 .chef, .chore img, .dinner img { 
-  display: inline;
+  /* display: inline; */
   height: 35px;
 }
 
@@ -153,4 +153,9 @@ ul {
   }
 }
 
+@media screen and (max-width: 350px) { 
+  h2.date { 
+    margin-left: 30px;
+  }
+}
 
