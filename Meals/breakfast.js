@@ -1,5 +1,7 @@
 
-var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
+// var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
+//I added this temp list ↓
+var bMeals = ["oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos", "french toast"];
 
 // optional breakfast meals 
 var bMeals2 = ["cereal *", "eggs *", "oatmeal *", "cereal *", "oatmeal *", "eggs *", "oatmeal *" ];
@@ -19,13 +21,15 @@ var bIngredients = [
 
 // breakfast icons
 var bIcons = [
-  "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
+  "https://image.flaticon.com/icons/svg/142/142915.svg",  //added
+  // "https://image.flaticon.com/icons/svg/1669/1669046.svg",
+  // "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/1543/1543334.svg",
   "https://image.flaticon.com/icons/svg/142/142915.svg", 
   "https://image.flaticon.com/icons/svg/2484/2484202.svg",
   "https://image.flaticon.com/icons/svg/1182/1182290.svg",
-  "https://image.flaticon.com/icons/svg/142/142882.svg" 
+  "https://image.flaticon.com/icons/svg/142/142882.svg",
+  "https://image.flaticon.com/icons/png/512/189/189122.png" //added 
 ];
 
 // option breakfast meal icons
@@ -85,4 +89,3 @@ function addBreakfasts() {
     sessionStorage.setItem('iCounter', 8);
   }
 }
-
