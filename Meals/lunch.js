@@ -1,10 +1,10 @@
 
 // lunch meals
 var lunchMWF = ["bagel", "corndog", "ramen"];
-var lunchO   = ["quesadillas", "cold cereal *", "pb & j sandwiches", "applesauce * & toast", "ham & cheese sandwiches"];
+var lunchO   = ["pb & j sandwiches", "cold cereal *", "quesadillas", "applesauce * & toast", "ham & cheese sandwiches"];
 
 // alternate lunch meals (gluten-free)
-var lMeals = ["chips & cheese *", "bagel *"]; 
+var lMeals = ["bagel *", "chips & cheese *"]; 
 //var lMeals = ["mac & cheese", "burritos", "hot dogs"];
 
 // lunch icons 
@@ -18,7 +18,7 @@ var lIcons = ["https://image.flaticon.com/icons/png/512/1046/1046748.png", "http
 ];
 
 var lIconMWF = ["https://image.flaticon.com/icons/png/512/1231/premium/1231662.png", "https://image.flaticon.com/icons/svg/837/837610.svg", "https://image.flaticon.com/icons/png/512/1046/1046748.png"];
-var lIcon     = ["https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/svg/2285/2285997.svg", "https://image.flaticon.com/icons/png/512/189/189122.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png"
+var lIcon     = ["https://image.flaticon.com/icons/svg/2285/2285997.svg", "https://image.flaticon.com/icons/svg/135/135516.svg", "https://image.flaticon.com/icons/png/512/872/872434.png", "https://image.flaticon.com/icons/png/512/189/189122.png", "https://image.flaticon.com/icons/png/512/1095/1095289.png"
 ];
 
 // ingredients
@@ -29,9 +29,9 @@ var lIngredientsMWF = [
 ];
 
 var lIngredients = [
-  ["tortillas", "cheese"],
-  ["cereal"],
   ["peanut butter", "jam", "bread"], 
+  ["cereal"],
+  ["tortillas", "cheese"],  
   ["applesauce", "bread"],
   ["bread", "ham slices", "cheese"]  
 ];
