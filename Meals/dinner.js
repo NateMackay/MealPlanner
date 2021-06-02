@@ -108,7 +108,9 @@ function displayDinner(index) {
   var sunday = parseInt(localStorage.sunday);
 
   //store the dinner meal
-  storeAMeal(dinnerMeals[parseInt(mealOrder[((sunday + index - 1) % (getDaysInMonth(day.getMonth())))])], index);
+  storeAMeal(dinnerMeals[parseInt(mealOrder[((sunday + index - 1) % (getDaysInMonth(
+    (day.getDate()<7?day.getMonth()-1:day.getMonth())
+    )))])], index);
 };
 
 //stores the json information into a javaScript object, displays the object, and stores it in localStorage 
