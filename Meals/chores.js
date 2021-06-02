@@ -1,9 +1,9 @@
 
 var family = ["chef/Dad.png", "chef/Mom.png", "chef/Gnat.png", "chef/Ginger.png", "chef/Cool.png", "chef/gmaJ.png", ""];
 
-var empty = [3, 5, 2, 1, 0, 5, 2];
-var clear = [2, 4, 3, 2, 1, 3, 1];
-var wash  = [0, 3, 1, 5, 2, 1, 3];
+var empty = [0, 1, 3, 2, 0, 3, 2];
+var clear = [0, 2, 1, 3, 0, 4, 1];
+var wash  = [1, 3, 2, 4, 3, 2, 0];
 
 function addChores() {
   var chore = document.getElementsByClassName('chore');
