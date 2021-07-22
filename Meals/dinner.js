@@ -111,17 +111,17 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 // 31 Chicken Salad Sandwiches
 // 32 Tuna Sandwiches
 // 33 Freezer meal
-// 34 
-// 35 
+
+
 
                 // day   1   2   3   4   5   6   7   8  
-var mealOrder =        [22, 21,  7, 18, 31,  0,  9, 22,
+var mealOrder =        [22, 21, 25, 18, 31,  0,  9, 22,
                 // day   9  10  11  12  13  14  15  16 
-                        32, 33, 14, 18, 18,  0, 25,  0,
+                        32, 33, 16, 18, 18,  0, 25,  0,
                 // day  17  18  19  20  21  22  23  24
-                         5, 27, 26, 18, 15, 18, 18, 29,
+                         5, 21, 27, 18, 15, 18, 18, 29,
                 // day  25  26  27  28  29  30  31  32?
-                        28,  2, 18, 30,  2,  1, 16, 15];
+                        28,  2, 32, 30,  2,  1, 16, 15];
 
 function displayDinner(index) {
   var day = new Date(); 
