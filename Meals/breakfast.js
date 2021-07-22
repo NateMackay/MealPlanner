@@ -1,12 +1,17 @@
 
 // var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
 //I added this temp list ↓
-var bMeals = ["oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos", "french toast"];
+var bMeals = ["oatmeal", "omlets & toast", "oatmeal", "pancakes", "german pancakes", "breakfast burritos", "french toast"];
 
 // optional breakfast meals 
-var bMeals2 = ["cereal *", "eggs *", "oatmeal *", "cereal *", "oatmeal *", "eggs *", "oatmeal *" ];
+var bMeals2 = ["cereal", "eggs", "oatmeal", "cereal", "oatmeal", "eggs", "oatmeal" ];
 
-var unused = [ "coffee cake", "https://image.flaticon.com/icons/svg/1662/1662345.svg" ]
+var unused = [ "coffee cake", "https://image.flaticon.com/icons/svg/1662/1662345.svg",
+               "smoothie", "https://thumbs.dreamstime.com/z/smoothie-white-fruit-glass-33375800.jpg",
+               "bisquit sandwich", "https://thumbs.dreamstime.com/z/breakfast-sandwich-red-plate-19929893.jpg",
+               "bagel sandwich", "https://thumbs.dreamstime.com/z/fresh-bagel-sandwich-16304862.jpg",
+               "malt-o-meal", "https://thumbs.dreamstime.com/z/bowl-white-grits-hot-tasty-butter-90792234.jpg",
+               "muffins", "https://thumbs.dreamstime.com/z/blueberry-muffins-basket-32954037.jpg"]
 
 // breakfast ingredients
 var bIngredients = [
