@@ -71,7 +71,7 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 
 '{"meals":[{"idMeal":"33","strMeal":"Freezer meal","strInstructions":"Bake a freezer meal","strMealThumb":"https://thumbs.dreamstime.com/z/freezer-packed-chicken-soup-various-frozen-food-packed-freezer-soup-chicken-107516180.jpg","strYoutube":" ","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
-'{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+'{"meals":[{"idMeal":"","strMeal":"Hamburgers","strInstructions":"But \'ex, cook \'em, eat \'em.","strMealThumb":"https://thumbs.dreamstime.com/z/two-delicious-hamburgers-isolated-white-background-41996378.jpg","strYoutube":" ","strIngredient1":"buns","strIngredient2":"hamburgers","strIngredient3":"lettuce","strIngredient4":"cheese","strIngredient5":"tomatoes","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
 '{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 ];
@@ -111,17 +111,17 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 // 31 Chicken Salad Sandwiches
 // 32 Tuna Sandwiches
 // 33 Freezer meal
-
+// 34 Hamburgers 
 
 
                 // day   1   2   3   4   5   6   7   8  
 var mealOrder =        [22, 21, 25, 18, 31,  0,  9, 22,
                 // day   9  10  11  12  13  14  15  16 
-                        32, 33, 16, 18, 18,  0, 25,  0,
+                        32, 33, 16, 18, 18,  0, 34,  0,
                 // day  17  18  19  20  21  22  23  24
-                         5, 21, 27, 18, 15, 18, 18, 29,
+                        16, 21, 27, 14, 15, 18, 18, 32,
                 // day  25  26  27  28  29  30  31  32?
-                        28,  2, 32, 30,  2,  1, 16, 15];
+                        28,  2, 26, 30,  2,  1, 16, 15];
 
 function displayDinner(index) {
   var day = new Date(); 
