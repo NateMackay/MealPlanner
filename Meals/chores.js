@@ -1,9 +1,9 @@
 
 var family = ["chef/Dad.png", "chef/Mom.png", "chef/Gnat.png", "chef/Ginger.png", "chef/Cool.png", "chef/gmaJ.png", ""];
 
-var empty = [0, 1, 3, 2, 4, 3, 2];
-var clear = [0, 2, 1, 3, 0, 4, 1];
-var wash  = [1, 3, 2, 4, 3, 2, 0];
+var empty = [3, 5, 2, 1, 0, 5, 2];
+var clear = [0, 2, 4, 3, 0, 1, 6];
+var wash  = [1, 3, 2, 0, 3, 2, 0];
 
 function addChores() {
   var chore = document.getElementsByClassName('chore');
@@ -19,12 +19,12 @@ function addChores() {
 
       var sp = document.createElement('div');
       sp.innerHTML = "Empty the dishwasher";
-      w.appendChild(sp);
+      // w.appendChild(sp);
 
       var washDishes = document.createElement('img');
       washDishes.setAttribute('src', family[empty[i]]);
       w.appendChild(washDishes);
-      dinner[i].insertBefore(w, dinner[i].childNodes[2]);
+      // dinner[i].insertBefore(w, dinner[i].childNodes[2]);
 
       // add Clear the table chore
       var box = document.createElement('p');
