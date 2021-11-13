@@ -71,57 +71,72 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 
 '{"meals":[{"idMeal":"33","strMeal":"Freezer meal","strInstructions":"Bake a freezer meal","strMealThumb":"https://thumbs.dreamstime.com/z/freezer-packed-chicken-soup-various-frozen-food-packed-freezer-soup-chicken-107516180.jpg","strYoutube":" ","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
-'{"meals":[{"idMeal":"","strMeal":"Hamburgers","strInstructions":"But \'ex, cook \'em, eat \'em.","strMealThumb":"https://thumbs.dreamstime.com/z/two-delicious-hamburgers-isolated-white-background-41996378.jpg","strYoutube":" ","strIngredient1":"buns","strIngredient2":"hamburgers","strIngredient3":"lettuce","strIngredient4":"cheese","strIngredient5":"tomatoes","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+'{"meals":[{"idMeal":"34","strMeal":"Hamburgers","strInstructions":"Buy \'ex, cook \'em, eat \'em.","strMealThumb":"https://thumbs.dreamstime.com/z/two-delicious-hamburgers-isolated-white-background-41996378.jpg","strYoutube":" ","strIngredient1":"buns","strIngredient2":"hamburgers","strIngredient3":"lettuce","strIngredient4":"cheese","strIngredient5":"tomatoes","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+
+'{"meals":[{"idMeal":"35","strMeal":"French Toast","strInstructions":"Cook bread in eggs mix","strMealThumb":"https://thumbs.dreamstime.com/z/french-toast-breakfast-setting-delicious-39846448.jpg","strYoutube":" ","strIngredient1":"bread","strIngredient2":"eggs","strIngredient3":"milk","strIngredient4":"toppings","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+
+'{"meals":[{"idMeal":"36","strMeal":"Soup","strInstructions":"","strMealThumb":"https://thumbs.dreamstime.com/z/hot-goulash-soup-21174770.jpg","strYoutube":"Heat up the soup and serve it.","strIngredient1":"can of soup","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+
+'{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+
+'{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
 '{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 ];
 
-// meals for reference
-// 0 Salad 
-// 1 Taco soup
-// 2 Chicken, Rice, and Broccoli
-// 3 Burritos
-// 4 Tuna Roll
-// 5 Fettuccine Alfredo
-// 6 Sweet Chili
-// 7 Potato bar
-// 8 Crock Pot Beef Stew
-// 9 Biscuit Pot Pie
-// 10 Spaghetti
-// 11 BBQ Drum Sticks
-// 12 Chili Beef Casserole
-// 13 Stir fry
-// 14 Roasted Chicken and Vegetables
-// 15 Rupe's
-// 16 Grilled Cheese & tomato soup
-// 17 Beef & Broccoli
-// 18 Pizza
-// 19 Ramen
-// 20 Pasta Salad
-// 21 Sandwiches
-// 22 7 layer dip
-// 23 German pancakes
-// 24 eggs & potatoes
-// 25 Egg salad sandwich
-// 26 Pancakes
-// 27 Chicken Ceasar Salad Wraps
-// 28 Bagel breakfast sandwiches
-// 29 Cabbage chicken salad
-// 30 Invited to dinner
-// 31 Chicken Salad Sandwiches
-// 32 Tuna Sandwiches
-// 33 Freezer meal
-// 34 Hamburgers 
+/* meals for reference
+* not good for low carb
++ Nate can make 
 
+0 Salad +
+1 Taco soup 
+2 Chicken, Rice, and Broccoli 
+3 Burritos +
+4 Tuna Roll *
+5 Fettuccine Alfredo 
+6 Sweet Chili 
+7 Potato bar +
+8 Crock Pot Beef Stew 
+9 Biscuit Pot Pie 
+10 Spaghetti +
+11 BBQ Drum Sticks 
+12 Chili Beef Casserole 
+13 Stir fry 
+14 Roasted Chicken and Vegetables +
+15 Rupe's 
+16 Grilled Cheese & tomato soup +
+17 Beef & Broccoli 
+18 Pizza +
+19 Ramen *
+20 Pasta Salad 
+21 Sandwiches +
+22 7 layer dip 
+23 German pancakes +
+24 eggs & potatoes +
+25 Egg salad sandwich +
+26 Pancakes 
+27 Chicken Ceasar Salad Wraps +
+28 Bagel breakfast sandwiches +
+29 Cabbage chicken salad 
+30 Invited to dinner +
+31 Chicken Salad Sandwiches +
+32 Tuna Sandwiches +
+33 Freezer meal +
+34 Hamburgers +
+35 French Toast +
+36 Soup +
+37 
+
+*/
 
                 // day   1   2   3   4   5   6   7   8  
-var mealOrder =        [22, 21, 25, 18, 31,  0,  9, 22,
+var mealOrder =        [22, 21, 14, 18, 31,  0, 25, 22,
                 // day   9  10  11  12  13  14  15  16 
-                        32, 33, 16, 18, 18,  0, 34,  0,
+                        32, 10, 16, 18, 34,  0, 34,  7,
                 // day  17  18  19  20  21  22  23  24
-                        16, 21, 27, 14, 15, 18, 18, 32,
+                        16, 21, 36, 14, 15, 18, 16, 32,
                 // day  25  26  27  28  29  30  31  32?
-                        28,  2, 26, 30,  2,  1, 16, 15];
+                        28, 30, 26, 30,  2, 32, 16, 15];
 
 function displayDinner(index) {
   var day = new Date(); 
