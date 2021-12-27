@@ -75,7 +75,7 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 
 '{"meals":[{"idMeal":"35","strMeal":"French Toast","strInstructions":"Cook bread in eggs mix","strMealThumb":"https://thumbs.dreamstime.com/z/french-toast-breakfast-setting-delicious-39846448.jpg","strYoutube":" ","strIngredient1":"bread","strIngredient2":"eggs","strIngredient3":"milk","strIngredient4":"toppings","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
-'{"meals":[{"idMeal":"36","strMeal":"Soup","strInstructions":"","strMealThumb":"https://thumbs.dreamstime.com/z/hot-goulash-soup-21174770.jpg","strYoutube":"Heat up the soup and serve it.","strIngredient1":"can of soup","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
+'{"meals":[{"idMeal":"36","strMeal":"Soup","strInstructions":"Heat up the soup and serve it.  ","strMealThumb":"https://thumbs.dreamstime.com/z/hot-goulash-soup-21174770.jpg","strYoutube":" ","strIngredient1":"can of soup","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
 '{"meals":[{"idMeal":"","strMeal":"meal","strInstructions":"","strMealThumb":"https","strYoutube":"www.youtube.com","strIngredient1":"","strIngredient2":"","strIngredient3":"","strIngredient4":"","strIngredient5":"","strIngredient6":"","strIngredient7":"","strIngredient8":"","strIngredient9":"","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":" ","strMeasure2":" ","strMeasure3":" ","strMeasure4":" ","strMeasure5":" ","strMeasure6":" ","strMeasure7":" ","strMeasure8":" ","strMeasure9":" ","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","dateModified":null}]}',
 
@@ -130,13 +130,13 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 */
 
                 // day   1   2   3   4   5   6   7   8  
-var mealOrder =        [22, 21, 14, 18, 31,  0, 25, 22,
+var mealOrder =        [35, 21,  2,  1, 31,  0,  3, 23,
                 // day   9  10  11  12  13  14  15  16 
-                        32, 10, 16, 18, 34,  0, 34,  7,
+                        24, 10,  7, 18, 34, 10, 13,  7,
                 // day  17  18  19  20  21  22  23  24
-                        16, 21, 36, 14, 15, 18, 16, 32,
+                        13, 21, 36, 14, 15, 18, 16, 32,
                 // day  25  26  27  28  29  30  31  32?
-                        28, 30, 26, 30,  2, 32, 16, 15];
+                        28, 30,  1, 36,  2,  0, 18, 15];
 
 function displayDinner(index) {
   var day = new Date(); 
