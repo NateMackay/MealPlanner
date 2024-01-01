@@ -130,13 +130,13 @@ var dinnerMeals = ['{"meals":[{ "idMeal":"0", "strMeal":"Salad",  "strInstructio
 */
 
                 // day   1   2   3   4   5   6   7   8  
-var mealOrder =        [24, 21,  2,  0, 31,  0,  3, 16,
+var mealOrder =        [30,  3, 10, 30,  7, 30,  3, 16,
                 // day   9  10  11  12  13  14  15  16 
-                        24, 10,  7, 18, 34, 10, 10,  7,
+                        14, 10,  7, 18, 34, 10, 10,  7,
                 // day  17  18  19  20  21  22  23  24
                         26, 30, 36, 14, 15, 36, 16, 32,
                 // day  25  26  27  28  29  30  31  32?
-                        14, 30,  1, 36,  2,  0, 18, 15];
+                        14, 30,  1, 36,  2,  0,  2, 15];
 
 function displayDinner(index) {
   var day = new Date(); 
