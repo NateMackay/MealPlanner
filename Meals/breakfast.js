@@ -1,52 +1,101 @@
+// [name, icon, ingredients]
+var breakfast_meals = [
+  ["oatmeal", "https://cdn-icons-png.flaticon.com/128/3141/3141698.png", ["oats", "peanut butter", "chocolate chips"]],
+  ["cereal", "https://cdn-icons-png.flaticon.com/128/3617/3617645.png", ["cereal", "milk"]],
+  ["eggs", "https://cdn-icons-png.flaticon.com/128/604/604808.png", ["eggs"]],
+  ["pancakes", "https://cdn-icons-png.flaticon.com/128/8084/8084040.png", ["pancake mix"]],
+  ["waffles","https://cdn-icons-png.flaticon.com/128/5100/5100397.png", ["pancake mix"]],
+  ["french toast", "https://cdn-icons-png.flaticon.com/128/3595/3595601.png", ["bread", "eggs"]],
+  ["toast", "https://cdn-icons-png.flaticon.com/128/3595/3595601.png", ["bread"]],
+  ["coffee cake", "https://cdn-icons-png.flaticon.com/128/7143/7143158.png", ["flour"]],
+  ["smoothie", "https://thumbs.dreamstime.com/z/smoothie-white-fruit-glass-33375800.jpg", ["fruit"]],
+  ["biscuit sandwich", "https://thumbs.dreamstime.com/z/breakfast-sandwich-red-plate-19929893.jpg", ["biscuits", "ham", "cheese"]],
+  ["bagel sandwich", "https://thumbs.dreamstime.com/z/fresh-bagel-sandwich-16304862.jpg", ["bagel"]],
+  ["malt-o-meal", "https://thumbs.dreamstime.com/z/bowl-white-grits-hot-tasty-butter-90792234.jpg", ["malt-o-meal"]],
+  ["muffins", "https://thumbs.dreamstime.com/z/blueberry-muffins-basket-32954037.jpg", []],
+  ["omlet", "https://cdn-icons-png.flaticon.com/128/3226/3226559.png", ["eggs"]],
+  ["german pancakes", "", ["eggs", "flour"]],
+]
 
-// var bMeals = ["waffles", "oatmeal *", "omlets * & toast", "oatmeal *", "pancakes", "german pancakes", "breakfast burritos" ];
-//I added this temp list ↓
-var bMeals = ["oatmeal", "omlets & toast", "oatmeal", "pancakes", "german pancakes", "breakfast burritos", "french toast"];
+// meals
+// 0 oatmeal
+// 1 cereal
+// 2 eggs
+// 3 pancakes
+// 4 waffles
+// 5 french toast
+// 6 toast
+// 7 coffee cake
+// 8 smoothie
+// 9 bisquit sandwich
+// 10 bagel sandwich
+// 11 malt-o-meal
+// 12 muffins
+// 13 omlet
+// 14 german pancakes
+
+// change meals for the week here
+var bWeek = [
+  5,
+  1,
+  0,
+  1,
+  0,
+  3,
+  1,
+]
+
+var bMeals = [
+  breakfast_meals[bWeek[0]][0],
+  breakfast_meals[bWeek[1]][0],
+  breakfast_meals[bWeek[2]][0],
+  breakfast_meals[bWeek[3]][0],
+  breakfast_meals[bWeek[4]][0],
+  breakfast_meals[bWeek[5]][0],
+  breakfast_meals[bWeek[6]][0]
+];
 
 // optional breakfast meals 
-var bMeals2 = ["cereal", "eggs", "oatmeal", "cereal", "oatmeal", "eggs", "oatmeal" ];
-
-var unused = [ "coffee cake", "https://image.flaticon.com/icons/svg/1662/1662345.svg",
-               "smoothie", "https://thumbs.dreamstime.com/z/smoothie-white-fruit-glass-33375800.jpg",
-               "bisquit sandwich", "https://thumbs.dreamstime.com/z/breakfast-sandwich-red-plate-19929893.jpg",
-               "bagel sandwich", "https://thumbs.dreamstime.com/z/fresh-bagel-sandwich-16304862.jpg",
-               "malt-o-meal", "https://thumbs.dreamstime.com/z/bowl-white-grits-hot-tasty-butter-90792234.jpg",
-               "muffins", "https://thumbs.dreamstime.com/z/blueberry-muffins-basket-32954037.jpg"]
-
-// breakfast ingredients
-var bIngredients = [
-  [""],
-  ["oats", "peanut butter", "chocolate chips"],
-  ["eggs", "peppers", "cheese"], 
-  ["oats", "peanut butter", "chocolate chips"],
-  ["flour", "sugar", "baking powder", "salt", "eggs", "oil", "milk"],
-  ["eggs", "flour", "sugar"],
-  ["tortillas", "eggs", "cubed ham", "cheese"]  
+var bMeals2 = [
+  breakfast_meals[1][0],
+  breakfast_meals[2][0],
+  breakfast_meals[0][0],
+  breakfast_meals[1][0],
+  breakfast_meals[0][0],
+  breakfast_meals[2][0],
+  breakfast_meals[0][0],
 ];
 
-// breakfast icons
 var bIcons = [
-  "https://image.flaticon.com/icons/svg/142/142915.svg",  //added
-  // "https://image.flaticon.com/icons/svg/1669/1669046.svg",
-  // "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/1543/1543334.svg",
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/2484/2484202.svg",
-  "https://image.flaticon.com/icons/svg/1182/1182290.svg",
-  "https://image.flaticon.com/icons/svg/142/142882.svg",
-  "https://image.flaticon.com/icons/png/512/189/189122.png" //added 
-];
+  breakfast_meals[bWeek[0]][1],
+  breakfast_meals[bWeek[1]][1],
+  breakfast_meals[bWeek[2]][1],
+  breakfast_meals[bWeek[3]][1],
+  breakfast_meals[bWeek[4]][1],
+  breakfast_meals[bWeek[5]][1],
+  breakfast_meals[bWeek[6]][1]
+]
+// breakfast bIngredients
+var bIngredients = [
+  breakfast_meals[bWeek[0]][2],
+  breakfast_meals[bWeek[1]][2],
+  breakfast_meals[bWeek[2]][2],
+  breakfast_meals[bWeek[3]][2],
+  breakfast_meals[bWeek[4]][2],
+  breakfast_meals[bWeek[5]][2],
+  breakfast_meals[bWeek[6]][2]
+]
 
 // option breakfast meal icons
 var Icons = [
-  "https://image.flaticon.com/icons/svg/135/135516.svg", 
-  "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/135/135516.svg", 
-  "https://image.flaticon.com/icons/svg/142/142915.svg", 
-  "https://image.flaticon.com/icons/svg/352/352702.svg", 
-  "https://image.flaticon.com/icons/svg/142/142915.svg" 
-  ];
+  breakfast_meals[1][1],
+  breakfast_meals[2][1],
+  breakfast_meals[0][1],
+  breakfast_meals[1][1],
+  breakfast_meals[0][1],
+  breakfast_meals[2][1],
+  breakfast_meals[0][1],
+];
 
 function addBreakfasts() { 
   var breakfast = document.getElementsByClassName('breakfastMeal'); 
